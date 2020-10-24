@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "straviaTec-web"
+    }
+  },
+  "defaultProject": "straviaTec-web",
+  "cli": {
+    "analytics": "02c4c14b-7c71-4a4a-ae13-47aaaacaefc0"
+  }
 }
