@@ -1,6 +1,66 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $.validator.setDefaults({
+      highlight: function(element){
+        $(element)
+          .closest('.form-group')
+          .addClass('has-error')
+      },
+      unhighlight: function(element){
+        $(element)
+          .closest('.form-group')
+          .removeClass('has-error')
+      }
+    });
+
+    $.validate({
+      rules:
+        {
+          password: "Requerido",
+          birthDate: "Requerido",
+          weight: {
+            required:true,
+            number:true
+          },
+          height:  {
+            required:true,
+            number:true
+          },
+          email: {
+            required: true,
+            email: true
+          }
+        },
+      messages:{
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      password: {
+        required: " Ingrese una contraseña"
+      },
+      birthDate: {
+        required: " Ingrese una fecha"
+      },
+      email: {
+        required: ' Ingrese el email',
+        email: ' Ingrese un email válido'
+      },
+      weight: {
+        required: " Ingrese su peso",
+        number: " Solo se aceptan números"
+      },
+      height: {
+        required: " Ingrese su altura",
+        number: " Solo se aceptan números"
+      },
+    })
+  })
+</script>
 <!------ Include the above in your HEAD tag ---------->
 <body>
   <div class="container">
@@ -33,7 +93,7 @@
       <div class="form-group">
         <label for="password" class="col-sm-3 control-label">Confirmar contraseña*</label>
         <div class="col-sm-9">
-          <input type="password" id="password" placeholder="Contraseña" class="form-control">
+          <input type="password" id="confirmPassword" placeholder="Contraseña" class="form-control">
         </div>
       </div>
       <div class="form-group">
@@ -52,13 +112,13 @@
       <div class="form-group">
         <label for="Height" class="col-sm-3 control-label">Altura*</label>
         <div class="col-sm-9">
-          <input type="number" id="height" placeholder="Please write your height in centimetres" class="form-control">
+          <input type="number" id="height" placeholder="Ingrese su altura en centímetros" class="form-control">
         </div>
       </div>
       <div class="form-group">
         <label for="weight" class="col-sm-3 control-label">Peso*</label>
         <div class="col-sm-9">
-          <input type="number" id="weight" placeholder="Please write your weight in kilograms" class="form-control">
+          <input type="number" id="weight" placeholder="Ingrese su peso en kilogramos" class="form-control">
         </div>
       </div>
       <div class="form-group">

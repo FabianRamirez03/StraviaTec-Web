@@ -110,11 +110,18 @@ body{
 }
 
 .login input[type=button]:hover{
-  opacity: 0.8;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  width: 305px;
+  height: 35px;
   background: #5379fa;
-  text-transform: uppercase;
+  border: 1px solid #5379fa;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  border-radius: 15px;
 }
 
 .login input[type=button]:active{
