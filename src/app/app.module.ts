@@ -9,8 +9,7 @@ import { FriendsComponent } from './Vistas/friends/friends.component';
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents,
-    FriendsComponent
+    routingComponents
   ],
   imports: [
     BrowserModule,

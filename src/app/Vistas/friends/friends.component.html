@@ -1,22 +1,48 @@
+<script type="text/javascript">
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  var searchBar = $("#searchBar");
+  var search = $('.search');
+
+  searchBar.focusin(function() {
+    search.addClass('active');
+  });
+  searchBar.focusout(function() {
+    search.removeClass('active');
+  });
+</script>
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
-      <div class="people-nearby">
-
-        <div class="nearby-user">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user" class="profile-photo-lg">
-            </div>
-            <div class="col-md-7 col-sm-7">
-              <h5><a href="#" class="profile-link">Sophia Page</a></h5>
-              <p>Software Engineer</p>
-              <p class="text-muted">500m away</p>
-            </div>
-            <div class="col-md-3 col-sm-3">
-              <button class="btn btn-primary pull-right">Add Friend</button>
-            </div>
+    <div class="col-md-12">
+      <div id="output">
+        <div class="search">
+          <i class="fa fa-fw fa-search"></i>
+          <input id="searchBar" type="text">
+        </div>
+        <div class="row friend" data-toggle="tooltip" data-placement="right">
+          <img src="http://lorempixel.com/500/500/people/" alt="">
+          <div class="title">
+            hotd0g
           </div>
+          <span href="" class="btn btn-light btn-lg" >Follow</span>
+        </div>
+        <div class="row friend" data-toggle="tooltip" data-placement="right">
+          <img src="http://lorempixel.com/500/500/people/" alt="">
+          <div class="title">
+            darkmatter
+          </div>
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-secondary">Secondary</button>
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-light">Light</button>
+          <button type="button" class="btn btn-dark">Dark</button>
+
+          <button type="button" class="btn btn-link">Link</button>
         </div>
       </div>
     </div>

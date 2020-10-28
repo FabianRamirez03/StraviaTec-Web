@@ -1,31 +1,83 @@
-body{
-  margin-top:20px;
-  background:#FAFAFA;
+body {
+  background: linear-gradient(to bottom right, #fd9, #0f9);
+  min-height: 100vh;
+
+  font-family: 'Cabin', sans-serif;
 }
 
-.people-nearby .google-maps{
-  background: #f8f8f8;
-  border-radius: 4px;
-  border: 1px solid #f1f2f2;
-  padding: 20px;
-  margin-bottom: 20px;
+
+#output {
+  margin: 2rem auto;
+  padding: 2rem;
+  min-width: 400px;
+  width: 33%;
+
+  background: rgba(#333, .8);
+
+  border-radius: 15px;
+
+  .search {
+    display: flex;
+    align-items: center;
+
+    padding: .25rem 1rem;
+    margin-bottom: 15px;
+
+    background: rgba(#fff, .2);
+
+    border: none;
+    border-radius: 999px;
+
+    transition: .3s all;
+
+    color: #fff;
+
+
+    input[type=text] {
+      flex-grow: 1;
+      padding-left: .5rem;
+
+      color: inherit;
+
+      font-size: 1.25rem;
+
+      background: transparent;
+      border: none;
+
+    }
+
+  }
+
+
+  .row.friend {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    color: white;
+
+    cursor: pointer;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    img {
+      display: inline;
+      width: 3rem;
+      height: 3rem;
+
+      border-radius: 999px;
+    }
+
+    .title {
+      flex-grow: 1;
+      padding: 0 .4rem;
+
+      display: inline;
+      font-size: 1.5rem;
+    }
+
+  }
 }
 
-.people-nearby .google-maps .map{
-  height: 300px;
-  width: 100%;
-  border: none;
-}
-
-.people-nearby .nearby-user{
-  padding: 20px 0;
-  border-top: 1px solid #f1f2f2;
-  border-bottom: 1px solid #f1f2f2;
-  margin-bottom: 20px;
-}
-
-img.profile-photo-lg{
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-}
