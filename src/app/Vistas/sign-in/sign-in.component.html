@@ -59,6 +59,21 @@
         number: " Solo se aceptan números"
       },
     })
+    $("input:checkbox").on('click', function() {
+      // in the handler, 'this' refers to the box clicked on
+      var $box = $(this);
+      if ($box.is(":checked")) {
+        // the name of the box is retrieved using the .attr() method
+        // as it is assumed and expected to be immutable
+        var group = "input:radio[name='" + $box.attr("name") + "']";
+        // the checked state of the group/box on the other hand will change
+        // and the current value is retrieved using .prop() method
+        $(group).prop("checked", false);
+        $box.prop("checked", true);
+      } else {
+        $box.prop("checked", false);
+      }
+    });
   })
 </script>
 <!------ Include the above in your HEAD tag ---------->
@@ -105,7 +120,7 @@
       <div class="form-group">
         <label for="phoneNumber" class="col-sm-3 control-label">Teléfono</label>
         <div class="col-sm-9">
-          <input type="phoneNumber" id="phoneNumber" placeholder="Número telefónico" class="form-control">
+          <input type="number" id="phoneNumber" placeholder="Número telefónico" class="form-control">
           <span class="help-block">No será información público</span>
         </div>
       </div>
@@ -127,12 +142,12 @@
           <div class="row">
             <div class="col-sm-4">
               <label class="radio-inline">
-                <input type="radio" id="femaleRadio" value="Female">Mujer
+                <input type="radio" name="mobil[1][]" id="femaleRadio" value="Female">Mujer
               </label>
             </div>
             <div class="col-sm-4">
               <label class="radio-inline">
-                <input type="radio" id="maleRadio" value="Male">Hombre
+                <input type="radio" name="mobil[1][]" value="Male">Hombre
               </label>
             </div>
           </div>
