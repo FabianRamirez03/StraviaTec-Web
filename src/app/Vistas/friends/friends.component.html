@@ -1,0 +1,41 @@
+<script type="text/javascript">
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  var searchBar = $("#searchBar");
+  var search = $('.search');
+
+  searchBar.focusin(function() {
+    search.addClass('active');
+  });
+  searchBar.focusout(function() {
+    search.removeClass('active');
+  });
+</script>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="output">
+        <div class="search">
+          <i class="fa fa-fw fa-search"></i>
+          <input id="searchBar" type="text">
+        </div>
+        <div class="row friend" data-toggle="tooltip" data-placement="right">
+          <img src="http://lorempixel.com/500/500/people/" alt="">
+          <div class="title">
+            hotd0g
+          </div>
+          <span href="" class="btn btn-light btn-lg" >Follow</span>
+        </div>
+        <div class="row friend" data-toggle="tooltip" data-placement="right">
+          <img src="http://lorempixel.com/500/500/people/" alt="">
+          <div class="title">
+            darkmatter
+          </div>
+          <button type="button" class="btn btn-primary">Follow</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
