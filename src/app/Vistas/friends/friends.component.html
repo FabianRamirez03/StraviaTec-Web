@@ -1,18 +1,4 @@
-<script type="text/javascript">
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-
-  var searchBar = $("#searchBar");
-  var search = $('.search');
-
-  searchBar.focusin(function() {
-    search.addClass('active');
-  });
-  searchBar.focusout(function() {
-    search.removeClass('active');
-  });
-</script>
+<div class="body"></div>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -21,19 +7,14 @@
           <i class="fa fa-fw fa-search"></i>
           <input id="searchBar" type="text">
         </div>
-        <div class="row friend" data-toggle="tooltip" data-placement="right">
-          <img src="http://lorempixel.com/500/500/people/" alt="">
-          <div class="title">
-            hotd0g
+        <div *ngFor="let atleta of atletas">
+          <div class="row friend" data-toggle="tooltip" data-placement="right">
+            <img src="http://lorempixel.com/500/500/people/" alt="">
+            <div class="title">
+              {{atleta}}
+            </div>
+            <button type="button" class="btn btn-primary" (click)="openDialog(atleta)">Follow</button>
           </div>
-          <span href="" class="btn btn-light btn-lg" >Follow</span>
-        </div>
-        <div class="row friend" data-toggle="tooltip" data-placement="right">
-          <img src="http://lorempixel.com/500/500/people/" alt="">
-          <div class="title">
-            darkmatter
-          </div>
-          <button type="button" class="btn btn-primary">Follow</button>
         </div>
       </div>
     </div>
