@@ -1,12 +1,18 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="body"></div>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+        <div class="search">
+          <i class="fa fa-fw fa-search"></i>
+          <input id="searchBar" type="text">
+        </div>
       <div class="main-timeline">
         <div class="timeline" *ngFor="let atleta of atletas">
           <a href="#" class="timeline-content">
             <span class="timeline-year">2020</span>
             <div class="timeline-icon">
-              <i class="fa fa-globe"></i>
+              <i class="fa fa-bicycle" aria-hidden="true"></i>
             </div>
             <h3 class="title">Web Designing</h3>
             <p class="description">

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CarrerasComponent implements OnInit {
   atletas: any;
   constructor() {
-    this.atletas = ['Mariana', 'Julio'];
+    this.atletas = ['Mariana', 'Julio', 'Julio'];
   }
 
   ngOnInit(): void {

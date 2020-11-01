@@ -145,3 +145,48 @@
 @media screen and (max-width:576px){
   .main-timeline .title{ font-size: 18px; }
 }
+.body{
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -40px;
+  bottom: -40px;
+  width: auto;
+  height: auto;
+  background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/professional-female-cyclist-on-the-road-royalty-free-image-1594045093.jpg?crop=1.00xw:0.752xh;0,0.132xh&resize=640:*);
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  z-index: 0;
+}
+
+  .search {
+    display: flex;
+    align-items: center;
+
+    padding: .25rem 1rem;
+    margin-bottom: 15px;
+
+    background: rgba(#fff, .2);
+
+    border: none;
+    border-radius: 999px;
+
+    transition: .3s all;
+
+    color: #fff;
+
+
+    input[type=text] {
+      flex-grow: 1;
+      padding-left: .5rem;
+
+      color: inherit;
+
+      font-size: 1.25rem;
+
+      background: transparent;
+      border: none;
+
+    }
+
+  }
