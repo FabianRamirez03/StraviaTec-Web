@@ -6,6 +6,7 @@ import { FriendsComponent } from './Vistas/friends/friends.component';
 import {HomePageComponent} from './Vistas/Cliente/Home/home-page/home-page.component';
 import {ActivityPageComponent} from './Vistas/Cliente/Actividades/activity-page/activity-page.component';
 import {AddActivtyComponent} from './Vistas/Cliente/Actividades/add-activty/add-activty.component';
+import {ActivityInfoComponent} from './Vistas/Cliente/Actividades/activity-info/activity-info.component';
 
 const routes: Routes = [
   {path: 'Login', component: LoginComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'friendSearch', component: FriendsComponent},
   {path: 'Home', component: HomePageComponent},
   {path: 'Activity', component: ActivityPageComponent},
-  {path: 'newActivity', component: AddActivtyComponent}
+  {path: 'newActivity', component: AddActivtyComponent},
+  {path: 'activityInfo', component: ActivityInfoComponent}
 ];
 
 @NgModule({
@@ -23,4 +25,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [LoginComponent, SignInComponent, FriendsComponent, HomePageComponent,
-  ActivityPageComponent, AddActivtyComponent];
+  ActivityPageComponent, AddActivtyComponent, ActivityInfoComponent];
