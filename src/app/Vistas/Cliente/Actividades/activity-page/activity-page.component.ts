@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {StateServiceService } from '../../../../Services/state-service.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-activity-page',
@@ -25,7 +27,11 @@ export class ActivityPageComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private stateService: StateServiceService, private router: Router) { }
+  goToCategoryInfo(category): void {
+    this.stateService.actividad = category;
+    this.router.navigate(['/activityInfo']);
+  }
 
   ngOnInit(): void {
   }

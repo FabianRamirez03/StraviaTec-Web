@@ -22,7 +22,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let activity of actividades">
-      <th scope="row"><a routerLink="/activityInfo" >{{activity.nombre}}</a></th>
+      <th scope="row"><a class="aCustom" (click)="goToCategoryInfo(activity)">{{activity.nombre}}</a></th>
       <td>{{activity.tipo}}</td>
       <td>{{activity.esfuerzo}}</td>
       <td>{{activity.fecha}}</td>

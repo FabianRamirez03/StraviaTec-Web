@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StateServiceService } from '../../../../Services/state-service.service';
 
 @Component({
   selector: 'app-activity-info',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityInfoComponent implements OnInit {
 
-  constructor() { }
+  activity;
+  constructor(private stateService: StateServiceService) { }
 
   ngOnInit(): void {
+    this.activity = this.stateService.actividad;
   }
 
 }
