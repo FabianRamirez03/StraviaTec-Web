@@ -18,22 +18,28 @@ export class MapComponent implements AfterViewInit  {
 
   private initMap(): void {
     const map = L.map('map');
-    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>'
-    }).addTo(map);
     this.map = map;
     const tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-      maxZoom: 15,
-      attribution: 'Powered by Leaflet Extras'
+      attribution: 'Powered by Leaflet Extras',
+      maxZoom: 17
     });
     tiles.addTo(this.map);
     // tslint:disable-next-line:prefer-const
-    let url = '../../../../assets/gpx/file.gpx'; // URL to your GPX file or the GPX itself
+    let url = '../../../../assets/gpx/file2.gpx'; // URL to your GPX file or the GPX itself
     let gpxHTml;
-    gpxHTml = new L.GPX(url, {async: true}).on('loaded', e => {
+    gpxHTml = new L.GPX(url, {
+      async: true,
+      polyline_options: {
+        color: 'orange',
+        opacity: 0.75,
+        weight: 3,
+        lineCap: 'round'
+      }
+    }).on('loaded', e => {
       map.fitBounds(e.target.getBounds());
     });
     gpxHTml.addTo(this.map);
+
   }
 
 }
