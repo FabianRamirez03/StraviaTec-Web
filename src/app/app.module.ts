@@ -5,6 +5,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FriendsComponent } from './Vistas/Atleta/friends/friends.component';
 import { CarrerasComponent } from './Vistas/Atleta/carreras/carreras.component';
+import { InicioComponent } from './Vistas/Atleta/inicio/inicio.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { CarrerasComponent } from './Vistas/Atleta/carreras/carreras.component';
     AppComponent,
     routingComponents,
     FriendsComponent,
-    CarrerasComponent
+    CarrerasComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

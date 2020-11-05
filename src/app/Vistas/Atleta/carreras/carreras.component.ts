@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carreras.component.scss']
 })
 export class CarrerasComponent implements OnInit {
-  atletas: any;
+  eventos: any;
   constructor() {
-    this.atletas = ['Mariana', 'Julio', 'Julio'];
+    this.eventos = ['Mariana', 'Julio', 'Julio'];
   }
 
   ngOnInit(): void {
