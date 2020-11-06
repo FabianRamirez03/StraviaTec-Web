@@ -13,3 +13,12 @@
 .aCustom.active {
   text-decoration: underline;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "left-column right-column";
+}
