@@ -17,6 +17,7 @@ export class ActivityPageComponent implements OnInit {
       nombre: 'Viaje por Chepe',
       fecha: '11/1/20',
       hora: '4:20 pm',
+      gpx: '../../../../assets/gpx/file.gpx',
     },
     {
       tipo: 'Senderismo',
@@ -24,6 +25,7 @@ export class ActivityPageComponent implements OnInit {
       nombre: 'Por el monte',
       fecha: '6/2/18',
       hora: '9:10 am',
+      gpx: '../../../../assets/gpx/file2.gpx',
     }
   ];
 

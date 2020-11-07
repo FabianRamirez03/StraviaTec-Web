@@ -1,4 +1,4 @@
-import { Component, AfterViewInit} from '@angular/core';
+import {Component, AfterViewInit, Input} from '@angular/core';
 import * as L from 'leaflet';
 import 'leaflet-gpx';
 @Component({
@@ -9,6 +9,7 @@ import 'leaflet-gpx';
 export class MapComponent implements AfterViewInit  {
   private map;
   gpx;
+  @Input() gpxURL;
 
   constructor() { }
 
@@ -25,7 +26,7 @@ export class MapComponent implements AfterViewInit  {
     });
     tiles.addTo(this.map);
     // tslint:disable-next-line:prefer-const
-    let url = '../../../../assets/gpx/file2.gpx'; // URL to your GPX file or the GPX itself
+    let url = this.gpxURL; // URL to your GPX file or the GPX itself
     let gpxHTml;
     gpxHTml = new L.GPX(url, {
       async: true,
