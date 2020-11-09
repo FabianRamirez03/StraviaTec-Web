@@ -37,4 +37,10 @@ export class ActivityPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  // tslint:disable-next-line:typedef
+  clickMethod(name: string) {
+    if (confirm('Are you sure to delete ' + name)) {
+      console.log('Implement delete functionality here');
+    }
+  }
 }
