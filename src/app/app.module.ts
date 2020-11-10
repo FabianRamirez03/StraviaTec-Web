@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FriendsComponent } from './Vistas/Atleta/friends/friends.component';
 import { CarrerasComponent } from './Vistas/Atleta/carreras/carreras.component';
 import { InicioComponent } from './Vistas/Atleta/inicio/inicio.component';
+import { RetosComponent } from './Vistas/Atleta/retos/retos.component';
+import { ProgresoComponent } from './Vistas/Atleta/progreso/progreso.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { InicioComponent } from './Vistas/Atleta/inicio/inicio.component';
     routingComponents,
     FriendsComponent,
     CarrerasComponent,
-    InicioComponent
+    InicioComponent,
+    RetosComponent,
+    ProgresoComponent
   ],
   imports: [
     BrowserModule,

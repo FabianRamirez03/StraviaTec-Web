@@ -4,6 +4,8 @@ import {LoginComponent} from './Vistas/login/login.component';
 import { FriendsComponent } from './Vistas/Atleta/friends/friends.component';
 import { CarrerasComponent } from './Vistas/Atleta/carreras/carreras.component';
 import { InicioComponent } from './Vistas/Atleta/inicio/inicio.component';
+import { RetosComponent } from './Vistas/Atleta/retos/retos.component';
+import { ProgresoComponent } from './Vistas/Atleta/progreso/progreso.component';
 
 const routes: Routes = [
   {path: 'Login', component: LoginComponent},
@@ -11,6 +13,8 @@ const routes: Routes = [
   {path: 'friendSearch', component: FriendsComponent},
   {path: 'carreras', component: CarrerasComponent},
   {path: 'inicio', component: InicioComponent},
+  {path: 'retos', component: RetosComponent},
+  {path: 'progreso', component: ProgresoComponent},
 ];
 
 @NgModule({
@@ -18,4 +22,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [LoginComponent, FriendsComponent, CarrerasComponent, InicioComponent];
+export const routingComponents = [LoginComponent, FriendsComponent, CarrerasComponent, InicioComponent, ProgresoComponent, RetosComponent];
