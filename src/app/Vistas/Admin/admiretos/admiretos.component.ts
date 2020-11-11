@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admiretos.component.scss']
 })
 export class AdmiretosComponent implements OnInit {
-
-  constructor() { }
+  retos: any;
+  constructor() {
+    this.retos = ['Mariana', 'Julio', 'Mariana', 'Julio', 'Mariana', 'Julio'];
+  }
 
   ngOnInit(): void {
   }
