@@ -8,7 +8,8 @@ import { CarrerasComponent } from './Vistas/Atleta/carreras/carreras.component';
 import { InicioComponent } from './Vistas/Atleta/inicio/inicio.component';
 import { RetosComponent } from './Vistas/Atleta/retos/retos.component';
 import { ProgresoComponent } from './Vistas/Atleta/progreso/progreso.component';
-
+import { AdmicarrerasComponent } from './Vistas/Admin/admicarreras/admicarreras.component';
+import { AdmiretosComponent } from './Vistas/Admin/admiretos/admiretos.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { ProgresoComponent } from './Vistas/Atleta/progreso/progreso.component';
     CarrerasComponent,
     InicioComponent,
     RetosComponent,
-    ProgresoComponent
+    ProgresoComponent,
+    AdmicarrerasComponent,
+    AdmiretosComponent
   ],
   imports: [
     BrowserModule,
