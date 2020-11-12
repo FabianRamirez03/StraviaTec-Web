@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="body"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="output">
+        <div class="search">
+          <i class="fa fa-fw fa-search"></i>
+          <input id="searchBar" type="text">
+        </div>
+        <div *ngFor="let atleta of atletas">
+          <div class="row friend" data-toggle="tooltip" data-placement="right">
+            <img src="http://lorempixel.com/500/500/people/" alt="">
+            <div class="title">
+              {{atleta}}
+            </div>
+            <button type="button" class="btn btn-primary" (click)="openDialog(atleta)">Follow</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

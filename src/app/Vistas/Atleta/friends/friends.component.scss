@@ -1,10 +1,16 @@
-body {
-  background: linear-gradient(to bottom right, #fd9, #0f9);
-  min-height: 100vh;
-
-  font-family: 'Cabin', sans-serif;
+.body{
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -40px;
+  bottom: -40px;
+  width: auto;
+  height: auto;
+  background-image: url(https://www.larepublica.net/storage/images/2020/05/25/20200525101056.ciclistas.jpg);
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  z-index: 0;
 }
-
 
 #output {
   margin: 2rem auto;

@@ -8,6 +8,13 @@ import {ActivityPageComponent} from './Vistas/Cliente/Actividades/activity-page/
 import {AddActivtyComponent} from './Vistas/Cliente/Actividades/add-activty/add-activty.component';
 import {ActivityInfoComponent} from './Vistas/Cliente/Actividades/activity-info/activity-info.component';
 import {EditProfileComponent} from './Vistas/edit-profile/edit-profile.component';
+import { FriendsComponent } from './Vistas/Atleta/friends/friends.component';
+import { CarrerasComponent } from './Vistas/Atleta/carreras/carreras.component';
+import { InicioComponent } from './Vistas/Atleta/inicio/inicio.component';
+import { RetosComponent } from './Vistas/Atleta/retos/retos.component';
+import { ProgresoComponent } from './Vistas/Atleta/progreso/progreso.component';
+import { AdmicarrerasComponent } from './Vistas/Admin/admicarreras/admicarreras.component';
+import { AdmiretosComponent } from './Vistas/Admin/admiretos/admiretos.component';
 
 const routes: Routes = [
   {path: 'Login', component: LoginComponent},
@@ -19,6 +26,12 @@ const routes: Routes = [
   {path: 'newActivity', component: AddActivtyComponent},
   {path: 'activityInfo', component: ActivityInfoComponent},
   {path: 'editProfile', component: EditProfileComponent}
+  {path: 'carreras', component: CarrerasComponent},
+  {path: 'inicio', component: InicioComponent},
+  {path: 'retos', component: RetosComponent},
+  {path: 'progreso', component: ProgresoComponent},
+  {path: 'admicarreras', component: AdmicarrerasComponent},
+  {path: 'admiretos', component: AdmiretosComponent},
 ];
 
 @NgModule({
