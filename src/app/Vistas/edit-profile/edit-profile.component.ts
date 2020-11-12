@@ -39,5 +39,8 @@ export class EditProfileComponent implements OnInit {
       this.profile.imageBytes = bytes.toString();
     };
   }
+  printInput(input): void{
+    console.log(input);
+  }
 
 }
