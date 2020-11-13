@@ -19,29 +19,30 @@
 <br>
 <button class="button  arrow" routerLink="/newActivity">Nueva actividad</button>
 <br>
-<br>
-<br>
 
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th scope="col">Nombre</th>
-    <th scope="col">Tipo</th>
-    <th scope="col">Esfuerzo</th>
-    <th scope="col">Fecha</th>
-    <th scope="col">Hora de inicio</th>
-    <th scope="col"></th>
-  </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let activity of actividades">
-      <th scope="row"><a class="aCustom" (click)="goToCategoryInfo(activity)">{{activity.nombre}}</a></th>
-      <td>{{activity.tipo}}</td>
-      <td>{{activity.esfuerzo}}</td>
-      <td>{{activity.fecha}}</td>
-      <td>{{activity.hora}}</td>
-      <td><button type="button" class="btn btn-danger" (click)="clickMethod(activity.nombre)">Eliminar</button></td>
-    </tr>
-  </tbody>
-</table>
+<section id="gallery">
+  <div class="container" style="min-width: 75%">
+    <div class="row">
+      <div class="col-md-4 mx-auto my-1" style="padding: 10px" *ngFor="let activity of actividades">
+        <div class="card card-inverse card-info">
+          <img class="card-img-top" src="../../../../../assets/images/activityTypes/{{activity.tipo}}.jpg">
+          <div class="card-block">
+            <figure class="profile profile-inline">
+              <img src="../../../../../assets/images/activityTypes/{{activity.tipo}}.jpg" class="profile-avatar" alt="">
+            </figure>
+            <h4 class="card-title">{{activity.nombre}}</h4>
+            <div class="card-text">
+              Fecha: {{activity.fecha}}   Hora: {{activity.hora}}
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-info btn-sm" style="margin-right: 20px" (click)="goToCategoryInfo(activity)">Información</button>
+            <button class="btn btn-danger btn-sm" (click)="clickMethod(activity.nombre)" >Eliminar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 

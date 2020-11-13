@@ -20,11 +20,35 @@ export class ActivityPageComponent implements OnInit {
       gpx: '../../../assets/gpx/file.gpx',
     },
     {
-      tipo: 'Senderismo',
+      tipo: 'Ciclismo de ruta',
       esfuerzo: 'Liviano',
       nombre: 'Por el monte',
       fecha: '6/2/18',
       hora: '9:10 am',
+      gpx: '../../../assets/gpx/file2.gpx',
+    },
+    {
+      tipo: 'Senderismo',
+      esfuerzo: 'Liviano',
+      nombre: 'Cerro chirripo',
+      fecha: '9/11/20',
+      hora: '7:47 am',
+      gpx: '../../../assets/gpx/file2.gpx',
+    },
+    {
+      tipo: 'Caminata',
+      esfuerzo: 'Liviano',
+      nombre: 'Mercedes Norte',
+      fecha: '4/20/20',
+      hora: '4:20 pm',
+      gpx: '../../../assets/gpx/file2.gpx',
+    },
+    {
+      tipo: 'Correr',
+      esfuerzo: 'Liviano',
+      nombre: 'San Ramón',
+      fecha: '19/11/15',
+      hora: '8:50 pm',
       gpx: '../../../assets/gpx/file2.gpx',
     }
   ];
