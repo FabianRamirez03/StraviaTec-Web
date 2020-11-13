@@ -1,89 +1,217 @@
-.body{
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -40px;
-  bottom: -40px;
-  width: auto;
-  height: auto;
-  background-image: url(https://www.larepublica.net/storage/images/2020/05/25/20200525101056.ciclistas.jpg);
-  background-size: cover;
-  -webkit-filter: blur(5px);
-  z-index: 0;
+body{
+  background:#dcdcdc;
+  margin-top:20px;}
+
+.widget-26 {
+  color: #3c4142;
+  font-weight: 400;
 }
 
-#output {
-  margin: 2rem auto;
-  padding: 2rem;
-  min-width: 400px;
-  width: 33%;
+.widget-26 tr:first-child td {
+  border: 0;
+}
 
-  background: rgba(#333, .8);
+.widget-26 .widget-26-job-emp-img img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
 
+.widget-26 .widget-26-job-title {
+  min-width: 200px;
+}
+
+.widget-26 .widget-26-job-title a {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #3c4142;
+  line-height: 1.5;
+}
+
+.widget-26 .widget-26-job-title a:hover {
+  color: #68CBD7;
+  text-decoration: none;
+}
+
+.widget-26 .widget-26-job-title .employer-name {
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #3c4142;
+  font-size: 0.8125rem;
+  color: #3c4142;
+}
+
+.widget-26 .widget-26-job-title .employer-name:hover {
+  color: #68CBD7;
+  text-decoration: none;
+}
+
+.widget-26 .widget-26-job-title .time {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.widget-26 .widget-26-job-info {
+  min-width: 100px;
+  font-weight: 400;
+}
+
+.widget-26 .widget-26-job-info p {
+  line-height: 1.5;
+  color: #3c4142;
+  font-size: 0.8125rem;
+}
+
+.widget-26 .widget-26-job-info .location {
+  color: #3c4142;
+}
+
+.widget-26 .widget-26-job-salary {
+  min-width: 70px;
+  font-weight: 400;
+  color: #3c4142;
+  font-size: 0.8125rem;
+}
+
+.widget-26 .widget-26-job-category {
+  padding: .5rem;
+  display: inline-flex;
+  white-space: nowrap;
   border-radius: 15px;
+}
 
-  .search {
+.widget-26 .widget-26-job-category .indicator {
+  width: 13px;
+  height: 13px;
+  margin-right: .5rem;
+  float: left;
+  border-radius: 50%;
+}
+
+.bg-soft-base {
+  background-color: #e1f5f7;
+}
+.bg-soft-warning {
+  background-color: #fff4e1;
+}
+.bg-soft-success {
+  background-color: #d1f6f2;
+}
+.bg-soft-danger {
+  background-color: #fedce0;
+}
+.bg-soft-info {
+  background-color: #d7efff;
+}
+
+
+.search-form {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.search-form input {
+  height: 100%;
+  background: transparent;
+  border: 0;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  height: 100%;
+  font-size: 1rem;
+}
+
+.search-form select {
+  background: transparent;
+  border: 0;
+  padding: 1rem;
+  height: 100%;
+  font-size: 1rem;
+}
+
+.search-form select:focus {
+  border: 0;
+}
+
+.search-form button {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .search-body .search-filters {
     display: flex;
-    align-items: center;
-
-    padding: .25rem 1rem;
-    margin-bottom: 15px;
-
-    background: rgba(#fff, .2);
-
-    border: none;
-    border-radius: 999px;
-
-    transition: .3s all;
-
-    color: #fff;
-
-
-    input[type=text] {
-      flex-grow: 1;
-      padding-left: .5rem;
-
-      color: inherit;
-
-      font-size: 1.25rem;
-
-      background: transparent;
-      border: none;
-
-    }
-
   }
-
-
-  .row.friend {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-
-    color: white;
-
-    cursor: pointer;
-
-    &:last-child {
-      padding-bottom: 0;
-    }
-
-    img {
-      display: inline;
-      width: 3rem;
-      height: 3rem;
-
-      border-radius: 999px;
-    }
-
-    .title {
-      flex-grow: 1;
-      padding: 0 .4rem;
-
-      display: inline;
-      font-size: 1.5rem;
-    }
-
+  .search-body .search-filters .filter-list {
+    margin-right: 1rem;
   }
 }
+
+.card-margin {
+  margin-bottom: 1.875rem;
+}
+
+@media (min-width: 992px){
+  .col-lg-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+}
+
+.card-margin {
+  margin-bottom: 1.875rem;
+}
+.card {
+  border: 0;
+  box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  background-clip: border-box;
+  background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/professional-female-cyclist-on-the-road-royalty-free-image-1594045093.jpg?crop=1.00xw:0.752xh;0,0.132xh&resize=640:*);
+  background-size: cover;
+  border: 1px solid #e6e4e9;
+  border-radius: 8px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.social-link:hover, .social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: #555;
+}
+
+
+
+
+
+
+
+
+
+
 
