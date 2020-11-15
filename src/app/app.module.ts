@@ -5,6 +5,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeHeaderComponent } from './Vistas/Cliente/Home/Components/home-header/home-header.component';
 import { MapComponent } from './Vistas/Cliente/Actividades/map/map.component';
+import { HomeFooterComponent } from './Vistas/Cliente/Home/Components/home-footer/home-footer.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { MapComponent } from './Vistas/Cliente/Actividades/map/map.component';
     routingComponents,
     HomeHeaderComponent,
     MapComponent,
+    HomeFooterComponent,
   ],
   imports: [
     BrowserModule,
