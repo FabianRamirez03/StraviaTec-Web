@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeHeaderComponent } from './Vistas/Cliente/Home/Components/home-header/home-header.component';
 import { MapComponent } from './Vistas/Cliente/Actividades/map/map.component';
 import { HomeFooterComponent } from './Vistas/Cliente/Home/Components/home-footer/home-footer.component';
+import { AdminHeaderComponent } from './Vistas/Cliente/Home/Components/admin-header/admin-header.component';
+import { AdmiGruposComponent } from './Vistas/Admin/admi-grupos/admi-grupos.component';
 
 
 @NgModule({
@@ -14,7 +16,8 @@ import { HomeFooterComponent } from './Vistas/Cliente/Home/Components/home-foote
     routingComponents,
     HomeHeaderComponent,
     MapComponent,
-    HomeFooterComponent,
+    AdminHeaderComponent,
+    AdmiGruposComponent,
   ],
   imports: [
     BrowserModule,

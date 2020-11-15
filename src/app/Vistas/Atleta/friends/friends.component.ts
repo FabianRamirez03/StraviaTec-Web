@@ -10,7 +10,7 @@ export class FriendsComponent implements OnInit {
   private search: string;
 
   constructor() {
-    this.atletas = ['Mariana', 'Julio'];
+    this.atletas = ['Mariana', 'Mario', 'Wajib', 'Fabian', 'Mario', 'Wajib', 'Fabian'];
   }
   openDialog(atletas: any): void{
     const found = false;
