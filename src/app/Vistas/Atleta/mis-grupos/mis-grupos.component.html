@@ -1,0 +1,33 @@
+<app-home-header></app-home-header>
+
+
+<h1 style="padding-left: 20px"> Mis Grupos</h1>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+
+<section id="gallery">
+  <div class="container" style="min-width: 75%">
+    <div class="row">
+      <div class="col-md-4 mx-auto my-1" style="padding: 10px" *ngFor="let grupo of grupos">
+        <div class="card card-inverse card-info">
+          <img class="card-img-top" src='{{grupo.imageURL}}'>
+          <div class="card-block">
+            <figure class="profile profile-inline">
+              <img src="{{grupo.imageURL}}" class="profile-avatar" alt="">
+            </figure>
+            <h4 class="card-title">{{grupo.nombre}}</h4>
+            <div class="card-text">
+              Administrador: {{grupo.admin}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<app-home-footer></app-home-footer>
