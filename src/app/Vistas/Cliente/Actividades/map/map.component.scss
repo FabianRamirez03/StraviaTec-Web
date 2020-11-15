@@ -1,17 +1,17 @@
 .map-container {
-  position: absolute;
   top: 80px;
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 30px;
-  padding-top: 50px
+  margin: 5px;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 .map-frame {
   border: 2px solid black;
-  height: 60%;
-  width: 50%;
+  height: 80%;
+  width: 90%;
 }
 
 #map {
