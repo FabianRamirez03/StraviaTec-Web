@@ -18,6 +18,7 @@ import { AdmiGruposComponent } from './Vistas/Admin/admi-grupos/admi-grupos.comp
     MapComponent,
     AdminHeaderComponent,
     AdmiGruposComponent,
+    HomeFooterComponent,
   ],
   imports: [
     BrowserModule,
