@@ -19,6 +19,7 @@ import {MisGruposComponent} from './Vistas/Atleta/mis-grupos/mis-grupos.componen
 import {AdminPatrocinadoresComponent} from './Vistas/Admin/admin-patrocinadores/admin-patrocinadores.component';
 import {NuevoPatrocinadorComponent} from './Vistas/Admin/nuevo-patrocinador/nuevo-patrocinador.component';
 import {ParticipantesCarreraComponent} from './Vistas/Admin/participantes-carrera/participantes-carrera.component';
+import {ParticipantesPorCategoriasComponent} from './Vistas/Admin/participantes-por-categorias/participantes-por-categorias.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/Login', pathMatch: 'full' },
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path: 'Patrocinadores', component: AdminPatrocinadoresComponent},
   {path: 'nuevoPatrocinador', component: NuevoPatrocinadorComponent},
   {path: 'participantesCarrera', component: ParticipantesCarreraComponent},
+  {path: 'participantesCategoria', component: ParticipantesPorCategoriasComponent},
 ];
 
 @NgModule({
@@ -51,4 +53,5 @@ export class AppRoutingModule { }
 export const routingComponents = [LoginComponent, SignInComponent, FriendsComponent, HomePageComponent,
   ActivityPageComponent, AddActivtyComponent, ActivityInfoComponent, EditProfileComponent, CarrerasComponent,
   InicioComponent, RetosComponent, ProgresoComponent, AdmicarrerasComponent, AdmiretosComponent, UnirseGrupoComponent,
-  MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent];
+  MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent,
+  ParticipantesPorCategoriasComponent];
