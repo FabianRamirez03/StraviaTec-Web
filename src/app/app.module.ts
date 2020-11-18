@@ -7,6 +7,7 @@ import { HomeHeaderComponent } from './Vistas/Cliente/Home/Components/home-heade
 import { MapComponent } from './Vistas/Cliente/Actividades/map/map.component';
 import { AdminHeaderComponent } from './Vistas/Cliente/Home/Components/admin-header/admin-header.component';
 import { AdmiGruposComponent } from './Vistas/Admin/admi-grupos/admi-grupos.component';
+import {HttpClient, HttpClientModule, HttpResponse} from '@angular/common/http';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AdmiGruposComponent } from './Vistas/Admin/admi-grupos/admi-grupos.comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
