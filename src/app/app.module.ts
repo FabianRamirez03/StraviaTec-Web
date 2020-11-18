@@ -5,6 +5,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeHeaderComponent } from './Vistas/Cliente/Home/Components/home-header/home-header.component';
 import { MapComponent } from './Vistas/Cliente/Actividades/map/map.component';
+import { HomeFooterComponent } from './Vistas/Cliente/Home/Components/home-footer/home-footer.component';
 import { AdminHeaderComponent } from './Vistas/Cliente/Home/Components/admin-header/admin-header.component';
 import { AdmiGruposComponent } from './Vistas/Admin/admi-grupos/admi-grupos.component';
 import {HttpClient, HttpClientModule, HttpResponse} from '@angular/common/http';
@@ -18,6 +19,7 @@ import {HttpClient, HttpClientModule, HttpResponse} from '@angular/common/http';
     MapComponent,
     AdminHeaderComponent,
     AdmiGruposComponent,
+    HomeFooterComponent,
   ],
   imports: [
     BrowserModule,

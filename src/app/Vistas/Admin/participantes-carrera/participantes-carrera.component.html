@@ -1,0 +1,28 @@
+<app-home-header></app-home-header>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<body>
+  <div class="sticky">
+  <h1>Partipantes de la carrera</h1>
+  <h3>Por orden de inscripción</h3>
+  </div>
+  <div class="container " id="outer">
+    <div class="row" id='inner' style="backdrop-filter: blur(3px); border-radius: 20px">
+      <div class="col-md-12" style="height: 20%">
+        <div class="card" style="border-width: 0; color: white"  *ngFor="let participante of participantes; let i = index">
+          <div class="gaadiex-list">
+            <div class="gaadiex-list-item"><img class="gaadiex-list-item-img" src="{{participante.image}}" alt="List user">
+              <div class="gaadiex-list-item-text" style="text-align: justify;">
+                <h3>{{i+1}}. {{participante.nombre}}</h3>
+                <h4>Edad: {{participante.edad}}</h4>
+                <p> Tiempo: {{participante.tiempo}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<app-home-footer></app-home-footer>

@@ -1,23 +1,11 @@
-<script>
-  // Get the modal
-  var modal = document.getElementById('id01');
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  }
-</script>
-
 <app-home-header></app-home-header>
 
-<h1>Mis actividades</h1>
+<h1>Mis Patrocinadores</h1>
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
 <br>
-<button class="button  arrow" routerLink="/newActivity">Nueva actividad</button>
+<button class="button  arrow" routerLink="/nuevoPatrocinador">Nuevo patrocinador</button>
 <br>
 
 <section id="gallery">
@@ -25,10 +13,10 @@
     <div class="row">
       <div class="col-md-4 mx-auto my-1" style="padding: 10px" *ngFor="let activity of actividades">
         <div class="card card-inverse card-info">
-          <img class="card-img-top" src="../../../../../assets/images/activityTypes/{{activity.tipo}}.jpg">
+          <img class="card-img-top" src="{{activity.image}}">
           <div class="card-block">
             <figure class="profile profile-inline">
-              <img src="../../../../../assets/images/activityTypes/{{activity.tipo}}.jpg" class="profile-avatar" alt="">
+              <img src="{{activity.image}}" class="profile-avatar" alt="">
             </figure>
             <h4 class="card-title">{{activity.nombre}}</h4>
             <div class="card-text">
@@ -36,8 +24,7 @@
             </div>
           </div>
           <div class="card-footer">
-            <button class="btn btn-info btn-sm" style="margin-right: 20px" (click)="goToCategoryInfo(activity)">Información</button>
-            <button class="btn btn-danger btn-sm" (click)="clickMethod(activity.nombre)" >Eliminar</button>
+            <button class="btn btn-danger btn-sm" >Eliminar</button>
           </div>
         </div>
       </div>

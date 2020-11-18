@@ -14,6 +14,12 @@ import { RetosComponent } from './Vistas/Atleta/retos/retos.component';
 import { ProgresoComponent } from './Vistas/Atleta/progreso/progreso.component';
 import { AdmicarrerasComponent } from './Vistas/Admin/admicarreras/admicarreras.component';
 import { AdmiretosComponent } from './Vistas/Admin/admiretos/admiretos.component';
+import {UnirseGrupoComponent} from './Vistas/Atleta/unirse-grupo/unirse-grupo.component';
+import {MisGruposComponent} from './Vistas/Atleta/mis-grupos/mis-grupos.component';
+import {AdminPatrocinadoresComponent} from './Vistas/Admin/admin-patrocinadores/admin-patrocinadores.component';
+import {NuevoPatrocinadorComponent} from './Vistas/Admin/nuevo-patrocinador/nuevo-patrocinador.component';
+import {ParticipantesCarreraComponent} from './Vistas/Admin/participantes-carrera/participantes-carrera.component';
+import {ParticipantesPorCategoriasComponent} from './Vistas/Admin/participantes-por-categorias/participantes-por-categorias.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/Login', pathMatch: 'full' },
@@ -31,6 +37,12 @@ const routes: Routes = [
   {path: 'progreso', component: ProgresoComponent},
   {path: 'admicarreras', component: AdmicarrerasComponent},
   {path: 'admiretos', component: AdmiretosComponent},
+  {path: 'Grupos', component: UnirseGrupoComponent},
+  {path: 'misGrupos', component: MisGruposComponent},
+  {path: 'Patrocinadores', component: AdminPatrocinadoresComponent},
+  {path: 'nuevoPatrocinador', component: NuevoPatrocinadorComponent},
+  {path: 'participantesCarrera', component: ParticipantesCarreraComponent},
+  {path: 'participantesCategoria', component: ParticipantesPorCategoriasComponent},
 ];
 
 @NgModule({
@@ -40,4 +52,6 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [LoginComponent, SignInComponent, FriendsComponent, HomePageComponent,
   ActivityPageComponent, AddActivtyComponent, ActivityInfoComponent, EditProfileComponent, CarrerasComponent,
-  InicioComponent, RetosComponent, ProgresoComponent, AdmicarrerasComponent, AdmiretosComponent];
+  InicioComponent, RetosComponent, ProgresoComponent, AdmicarrerasComponent, AdmiretosComponent, UnirseGrupoComponent,
+  MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent,
+  ParticipantesPorCategoriasComponent];

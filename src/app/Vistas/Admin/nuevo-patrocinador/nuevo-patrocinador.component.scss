@@ -1,0 +1,25 @@
+h1 {
+  font-size: 20px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+body {
+  background: url(https://cdn.pixabay.com/photo/2020/08/22/00/24/cyclist-5507225_1280.jpg);
+  background-size: cover;
+  height: 100%;
+}
+
+.container {
+  width: 500px;
+  clear: both;
+  top: calc(12%);
+  display: flex;
+  position: sticky;
+  max-height: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  border-color: black;
+}
+

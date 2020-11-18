@@ -1,0 +1,134 @@
+<app-home-header></app-home-header>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<body>
+<div class="sticky">
+  <h1>Partipantes de la carrera</h1>
+  <h3>Ordenados por categorias</h3>
+</div>
+<div class="container FixedHeightContainer" id="outer">
+  <div class="row Content scrollbar-light-blue" id='inner' style="backdrop-filter: blur(3px); border-radius: 20px">
+    <h1>Junior:</h1>
+    <div class="col-md-12 Relative" *ngIf="!junior.length">
+      <h2>No hay participantes en esta categoria</h2>
+    </div>
+    <div class="col-md-12 Relative" *ngIf="junior.length">
+      <div class="card" style="border-width: 0; color: white"  *ngFor="let participante of junior; let i = index">
+        <div class="gaadiex-list">
+          <div class="gaadiex-list-item"><img class="gaadiex-list-item-img" src="{{participante.image}}" alt="List user">
+            <div class="gaadiex-list-item-text" style="text-align: justify;">
+              <h3>{{i+1}}. {{participante.nombre}}</h3>
+              <h4>Edad: {{participante.edad}}</h4>
+              <p> Tiempo: {{participante.tiempo}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Sub-23:</h1>
+    <div class="col-md-12 Relative" *ngIf="!sub23.length">
+      <h2>No hay participantes en esta categoria</h2>
+    </div>
+    <div class="col-md-12 Relative" *ngIf="sub23.length">
+      <div class="card" style="border-width: 0; color: white"  *ngFor="let participante of sub23; let i = index">
+        <div class="gaadiex-list">
+          <div class="gaadiex-list-item"><img class="gaadiex-list-item-img" src="{{participante.image}}" alt="List user">
+            <div class="gaadiex-list-item-text" style="text-align: justify;">
+              <h3>{{i+1}}. {{participante.nombre}}</h3>
+              <h4>Edad: {{participante.edad}}</h4>
+              <p> Tiempo: {{participante.tiempo}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Open:</h1>
+    <div class="col-md-12 Relative" *ngIf="!open.length">
+      <h2>No hay participantes en esta categoria</h2>
+    </div>
+    <div class="col-md-12 Relative" *ngIf="open.length">
+      <div class="card" style="border-width: 0; color: white"  *ngFor="let participante of open; let i = index">
+        <div class="gaadiex-list">
+          <div class="gaadiex-list-item"><img class="gaadiex-list-item-img" src="{{participante.image}}" alt="List user">
+            <div class="gaadiex-list-item-text" style="text-align: justify;">
+              <h3>{{i+1}}. {{participante.nombre}}</h3>
+              <h4>Edad: {{participante.edad}}</h4>
+              <p> Tiempo: {{participante.tiempo}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Master A:</h1>
+    <div class="col-md-12 Relative" *ngIf="!masterA.length">
+      <h2>No hay participantes en esta categoria</h2>
+    </div>
+    <div class="col-md-12 Relative" *ngIf="masterA.length">
+      <div class="card" style="border-width: 0; color: white"  *ngFor="let participante of masterA; let i = index">
+        <div class="gaadiex-list">
+          <div class="gaadiex-list-item"><img class="gaadiex-list-item-img" src="{{participante.image}}" alt="List user">
+            <div class="gaadiex-list-item-text" style="text-align: justify;">
+              <h3>{{i+1}}. {{participante.nombre}}</h3>
+              <h4>Edad: {{participante.edad}}</h4>
+              <p> Tiempo: {{participante.tiempo}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Master B:</h1>
+    <div class="col-md-12 Relative" *ngIf="!masterB.length">
+      <h2>No hay participantes en esta categoria</h2>
+    </div>
+    <div class="col-md-12 Relative" *ngIf="masterB.length">
+      <div class="card" style="border-width: 0; color: white"  *ngFor="let participante of masterB; let i = index">
+        <div class="gaadiex-list">
+          <div class="gaadiex-list-item"><img class="gaadiex-list-item-img" src="{{participante.image}}" alt="List user">
+            <div class="gaadiex-list-item-text" style="text-align: justify;">
+              <h3>{{i+1}}. {{participante.nombre}}</h3>
+              <h4>Edad: {{participante.edad}}</h4>
+              <p> Tiempo: {{participante.tiempo}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Master C:</h1>
+    <div class="col-md-12 Relative" *ngIf="!masterC.length">
+      <h2>No hay participantes en esta categoria</h2>
+    </div>
+    <div class="col-md-12 Relative" *ngIf="masterC.length">
+      <div class="card" style="border-width: 0; color: white"  *ngFor="let participante of masterC; let i = index">
+        <div class="gaadiex-list">
+          <div class="gaadiex-list-item"><img class="gaadiex-list-item-img" src="{{participante.image}}" alt="List user">
+            <div class="gaadiex-list-item-text" style="text-align: justify;">
+              <h3>{{i+1}}. {{participante.nombre}}</h3>
+              <h4>Edad: {{participante.edad}}</h4>
+              <p> Tiempo: {{participante.tiempo}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Élite:</h1>
+    <div class="col-md-12 Relative" *ngIf="!Elite.length">
+      <h2>No hay participantes en esta categoria</h2>
+    </div>
+    <div class="col-md-12 Relative" *ngIf="Elite.length">
+      <div class="card" style="border-width: 0; color: white"  *ngFor="let participante of Elite; let i = index">
+        <div class="gaadiex-list">
+          <div class="gaadiex-list-item"><img class="gaadiex-list-item-img" src="{{participante.image}}" alt="List user">
+            <div class="gaadiex-list-item-text" style="text-align: justify;">
+              <h3>{{i+1}}. {{participante.nombre}}</h3>
+              <h4>Edad: {{participante.edad}}</h4>
+              <p> Tiempo: {{participante.tiempo}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-home-footer></app-home-footer>
+</body>
+
