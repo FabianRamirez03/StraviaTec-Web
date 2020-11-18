@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
 
-  constructor() { }
+  imageByte;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  setByteArray(files): void {
+    const reader = new FileReader();
+    // this.profile.image = files;
+    reader.readAsDataURL(files[0]);
+    reader.onload = e => {
+      const bytes = reader.result;
+      console.log(bytes);
+      this.imageByte = bytes.toString();
+    };
+  }
 }
+
