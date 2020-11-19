@@ -1,1 +1,28 @@
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<app-home-header></app-home-header>
+<div class="body"></div>
+<ul>
+  <div *ngFor="let grupo of grupos">
+    <li class= "booking-card">
+      <div class="book-container">
+        <div class="content">
+          <button (click) = "suscribirseClick()" class="btn">Actualizar Grupo</button>
+        </div>
+      </div>
+      <div class="informations-container">
+        <h2 class="title">Grupo: {{grupo}}</h2>
+        <p class="sub-title">Organizador: Nombre organizador</p>
+        <div class="more-information">
+          <div class="info-and-date-container">
+            <div class="cajita">
+              <button type="submit" class="btn btn-primary">Gestion Miembros</button>
+            </div>
+            <div class="cajita">
+                <button class="btn btn-danger">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </div>
+</ul>

@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admi-grupos.component.scss']
 })
 export class AdmiGruposComponent implements OnInit {
-
-  constructor() { }
+  grupos: any;
+  constructor() {
+    this.grupos = ['Moncho Bikers', 'Ruedas de Heredia', 'Cartago le pone'];
+  }
 
   ngOnInit(): void {
+  }
+
+  suscribirseClick(): void{
+    console.log('click en suscribirse');
   }
 
 }
