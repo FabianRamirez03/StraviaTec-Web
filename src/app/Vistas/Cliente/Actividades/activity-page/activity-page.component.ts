@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
 export class ActivityPageComponent implements OnInit {
   actividades = [
     {
-      tipo: 'Ciclismo de montaña',
+      tipo: 'Caminata',
       esfuerzo: 'Intermedio',
       nombre: 'Viaje por Chepe',
       fecha: '11/1/20',
@@ -20,7 +20,7 @@ export class ActivityPageComponent implements OnInit {
       gpx: '../../../assets/gpx/file.gpx',
     },
     {
-      tipo: 'Ciclismo de ruta',
+      tipo: 'Ciclismo',
       esfuerzo: 'Liviano',
       nombre: 'Por el monte',
       fecha: '6/2/18',
@@ -36,7 +36,7 @@ export class ActivityPageComponent implements OnInit {
       gpx: '../../../assets/gpx/file2.gpx',
     },
     {
-      tipo: 'Caminata',
+      tipo: 'Kayak',
       esfuerzo: 'Liviano',
       nombre: 'Mercedes Norte',
       fecha: '4/20/20',
@@ -44,7 +44,7 @@ export class ActivityPageComponent implements OnInit {
       gpx: '../../../assets/gpx/file2.gpx',
     },
     {
-      tipo: 'Correr',
+      tipo: 'Nadar',
       esfuerzo: 'Liviano',
       nombre: 'San Ramón',
       fecha: '19/11/15',
