@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-unirse-grupo',
@@ -29,8 +31,9 @@ export class UnirseGrupoComponent implements OnInit {
       imageURL: 'https://source.unsplash.com/1600x900/?soccer,sports',
     }
     ];
-  constructor() { }
-
+  constructor(public httpService: HttpClient, private router: Router) { }
+  gruposExist(): void{}
+  unirse(): void{}
   ngOnInit(): void {
   }
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-admicarreras',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdmicarrerasComponent implements OnInit {
   retos: any;
-  constructor() {
+  constructor(public httpService: HttpClient, private router: Router) {
     this.retos = ['Mariana', 'Julio', 'Mariana', 'Julio', 'Mariana', 'Julio'];
   }
+  misCarreras(): void{}
 
   ngOnInit(): void {
   }
