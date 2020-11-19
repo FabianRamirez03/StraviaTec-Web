@@ -20,6 +20,8 @@ import {AdminPatrocinadoresComponent} from './Vistas/Admin/admin-patrocinadores/
 import {NuevoPatrocinadorComponent} from './Vistas/Admin/nuevo-patrocinador/nuevo-patrocinador.component';
 import {ParticipantesCarreraComponent} from './Vistas/Admin/participantes-carrera/participantes-carrera.component';
 import {ParticipantesPorCategoriasComponent} from './Vistas/Admin/participantes-por-categorias/participantes-por-categorias.component';
+import { ModiCarreraComponent } from './Vistas/Admin/modi-carrera/modi-carrera.component';
+import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.component';
 import {AdmiGruposComponent} from './Vistas/Admin/admi-grupos/admi-grupos.component';
 import {GestionMiembrosGrupoComponent} from './Vistas/Admin/gestion-miembros-grupo/gestion-miembros-grupo.component';
 
@@ -46,6 +48,8 @@ const routes: Routes = [
   {path: 'nuevoPatrocinador', component: NuevoPatrocinadorComponent},
   {path: 'participantesCarrera', component: ParticipantesCarreraComponent},
   {path: 'participantesCategoria', component: ParticipantesPorCategoriasComponent},
+  {path: 'modiCarreras', component: ModiCarreraComponent},
+  {path: 'modiRetos', component: ModiRetosComponent},
   {path: 'gestionGrupos', component: GestionMiembrosGrupoComponent}
 ];
 
@@ -58,4 +62,5 @@ export const routingComponents = [LoginComponent, SignInComponent, FriendsCompon
   ActivityPageComponent, AddActivtyComponent, ActivityInfoComponent, EditProfileComponent, CarrerasComponent,
   InicioComponent, RetosComponent, ProgresoComponent, AdmicarrerasComponent, AdmiretosComponent, UnirseGrupoComponent,
   MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent,
+  ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent];
   ParticipantesPorCategoriasComponent, AdmiGruposComponent];

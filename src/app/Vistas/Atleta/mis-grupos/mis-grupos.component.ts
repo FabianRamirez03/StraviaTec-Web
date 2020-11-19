@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-mis-grupos',
@@ -19,9 +21,8 @@ export class MisGruposComponent implements OnInit {
       imageURL: 'https://source.unsplash.com/1600x900/?soccer,sports',
     }
   ];
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  constructor(public httpService: HttpClient, private router: Router) { }
+  misGrupos(): void{}
+  ngOnInit(): void {}
 
 }
