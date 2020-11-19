@@ -6,19 +6,19 @@
     <li class= "booking-card">
       <div class="book-container">
         <div class="content">
-          <button (click) = "suscribirseClick()" class="btn">Actualizar Grupo</button>
+          <button (click) = "ActualizarClick()" class="btn">Actualizar Grupo</button>
         </div>
       </div>
       <div class="informations-container">
-        <h2 class="title">Grupo: {{grupo}}</h2>
-        <p class="sub-title">Organizador: Nombre organizador</p>
+        <h2 class="title">Grupo: {{grupo.nombre}}</h2>
+        <p class="sub-title">ID del grupo: {{grupo.idgrupo}}</p>
         <div class="more-information">
           <div class="info-and-date-container">
             <div class="cajita">
-              <button type="submit" class="btn btn-primary">Gestion Miembros</button>
+              <button (click) = "GestionClick()" type="submit" class="btn btn-primary">Gestion Miembros</button>
             </div>
             <div class="cajita">
-                <button class="btn btn-danger">Eliminar</button>
+                <button (click) = "DeleteClick()" class="btn btn-danger">Eliminar</button>
             </div>
           </div>
         </div>

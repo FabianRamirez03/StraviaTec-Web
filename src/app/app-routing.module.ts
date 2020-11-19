@@ -21,6 +21,7 @@ import {NuevoPatrocinadorComponent} from './Vistas/Admin/nuevo-patrocinador/nuev
 import {ParticipantesCarreraComponent} from './Vistas/Admin/participantes-carrera/participantes-carrera.component';
 import {ParticipantesPorCategoriasComponent} from './Vistas/Admin/participantes-por-categorias/participantes-por-categorias.component';
 import {AdmiGruposComponent} from './Vistas/Admin/admi-grupos/admi-grupos.component';
+import {GestionMiembrosGrupoComponent} from './Vistas/Admin/gestion-miembros-grupo/gestion-miembros-grupo.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/admigrupos', pathMatch: 'full' },
@@ -45,6 +46,7 @@ const routes: Routes = [
   {path: 'nuevoPatrocinador', component: NuevoPatrocinadorComponent},
   {path: 'participantesCarrera', component: ParticipantesCarreraComponent},
   {path: 'participantesCategoria', component: ParticipantesPorCategoriasComponent},
+  {path: 'gestionGrupos', component: GestionMiembrosGrupoComponent}
 ];
 
 @NgModule({
