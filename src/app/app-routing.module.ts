@@ -22,6 +22,7 @@ import {ParticipantesCarreraComponent} from './Vistas/Admin/participantes-carrer
 import {ParticipantesPorCategoriasComponent} from './Vistas/Admin/participantes-por-categorias/participantes-por-categorias.component';
 import { ModiCarreraComponent } from './Vistas/Admin/modi-carrera/modi-carrera.component';
 import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.component';
+import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/Login', pathMatch: 'full' },
@@ -47,6 +48,7 @@ const routes: Routes = [
   {path: 'participantesCategoria', component: ParticipantesPorCategoriasComponent},
   {path: 'modiCarreras', component: ModiCarreraComponent},
   {path: 'modiRetos', component: ModiRetosComponent},
+  {path: 'subsCarreras', component: SubsCarreraComponent},
 ];
 
 @NgModule({
@@ -58,4 +60,4 @@ export const routingComponents = [LoginComponent, SignInComponent, FriendsCompon
   ActivityPageComponent, AddActivtyComponent, ActivityInfoComponent, EditProfileComponent, CarrerasComponent,
   InicioComponent, RetosComponent, ProgresoComponent, AdmicarrerasComponent, AdmiretosComponent, UnirseGrupoComponent,
   MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent,
-  ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent];
+  ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent, SubsCarreraComponent];
