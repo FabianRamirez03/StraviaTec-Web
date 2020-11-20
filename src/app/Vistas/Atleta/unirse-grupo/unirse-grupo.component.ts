@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient, HttpResponse} from '@angular/common/http';
+import {Router} from '@angular/router';
+import {MessengerService} from '../../../MessengerService';
 
 @Component({
   selector: 'app-unirse-grupo',
@@ -6,31 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./unirse-grupo.component.scss']
 })
 export class UnirseGrupoComponent implements OnInit {
-
-  grupos = [
-    {
-      nombre: 'Caminantes de Santa Barbara',
-      admin: 'Mariana',
-      imageURL: 'https://source.unsplash.com/1600x900/?hiking,sports',
-    },
-    {
-      nombre: 'Nadadores de Moncho',
-      admin: 'Wajib',
-      imageURL: 'https://source.unsplash.com/1600x900/?swimming,sports',
-    },
-    {
-      nombre: 'Ciclistas de Moncho',
-      admin: 'Mario',
-      imageURL: 'https://source.unsplash.com/1600x900/?cycling,sports',
-    },
-    {
-      nombre: 'Mejengueros de Mercedes',
-      admin: 'Fabian',
-      imageURL: 'https://source.unsplash.com/1600x900/?soccer,sports',
-    }
-    ];
-  constructor() { }
-
+  grupos: any;
+  atleta: any;
+  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
+    this.messengerService.message.subscribe(value => {this.atleta = value; });
+    this.httpService.post('http://localhost/APIStraviaTec/Usuario/Groups', { idusuario: this.atleta.idusuario}).subscribe(
+      (resp: HttpResponse<any>) => { this.grupos = resp; console.log(resp); });
+  }
+  gruposExist(): void{}
+  unirse(): void{}
   ngOnInit(): void {
   }
 

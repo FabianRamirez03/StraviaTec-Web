@@ -6,11 +6,11 @@
 <br>
 <div class="login">
   <label>
-    <input type="text" placeholder="Nombre de usuario" name="user">
+    <input type="text" placeholder="Nombre de usuario" id="user">
   </label><br>
   <label>
-    <input type="password" placeholder="Contraseña" name="password">
+    <input type="password" placeholder="Contraseña" id="password">
   </label><br>
-  <input type="button" value="Login" routerLink="/inicio">
-  <p class="login2__signup">No tienes una cuenta? &nbsp;<a>Registrate</a></p>
+  <input type="button" value="Login" (click)="login()" >
+  <p class="login2__signup">No tienes una cuenta? &nbsp;<a routerLink="/SignIn">Registrate</a></p>
 </div>
