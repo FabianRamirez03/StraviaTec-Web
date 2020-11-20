@@ -36,7 +36,6 @@ export class InicioComponent implements OnInit {
     this.router.navigate(['/', 'retos']);
   }
   misCarreras(): void{
-    alert(this.atleta);
     this.messengerService.setMessage(this.atleta);
     this.router.navigate(['/', 'friendSearch']);
   }

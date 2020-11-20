@@ -16,6 +16,7 @@ export class FriendsComponent implements OnInit {
   mensaje: any;
 
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
+    alert('holi');
     this.messengerService.message.subscribe(value => {this.atleta = value; });
   }
   openDialog(atletas: any): void{
@@ -33,6 +34,7 @@ export class FriendsComponent implements OnInit {
       (resp: HttpResponse<any>) => { this.mensaje = resp; console.log(resp); });
   }
   ngOnInit(): void {
+    alert(this.atleta.idusuario);
   }
 
 }
