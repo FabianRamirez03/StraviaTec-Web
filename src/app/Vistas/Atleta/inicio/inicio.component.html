@@ -75,6 +75,7 @@
             {{"Distancia: "+atleta.kilometros+"Km"}}
           </p>
         </div>
+        <app-map ></app-map>
         <div class="card-footer">
           <a  class="card-link"><i class="fa fa-gittip"></i> Like</a>
         </div>
@@ -89,24 +90,24 @@
         <div class="card-body">
           <h5 class="card-title">Carreras</h5>
           <p class="card-text">Compite en las diferentes carreras, para ganar diferentes premios</p>
-          <a href="#" class="card-link" routerLink="/Activity">Mis carreras</a>
-          <a href="#" class="card-link" routerLink="/carreras">Nuevas carreras</a>
+          <a href="#" class="card-link" routerLink="/friendSearch">Mis carreras</a>
+          <a href="#" class="card-link" (click)="carreras()">Nuevas carreras</a>
         </div>
       </div>
       <div class="card gedf-card" >
         <div class="card-body">
           <h5 class="card-title">Retos</h5>
           <p class="card-text">Desafiate y mejora tu rendimeinto.</p>
-          <a href="#" class="card-link" routerLink="/progreso">Mis retos</a>
-          <a href="#" class="card-link" routerLink="/retos">Nuevos retos</a>
+          <a href="#" class="card-link" (click)="misRetos()">Mis retos</a>
+          <a href="#" class="card-link" (click)="retos()">Nuevos retos</a>
         </div>
       </div>
       <div class="card gedf-card" >
         <div class="card-body">
           <h5 class="card-title">Grupos</h5>
           <p class="card-text">Conoce nuevos grupos de persona con sus mismos intereses.</p>
-          <a href="#" class="card-link" routerLink="/misGrupos">Mis grupos</a>
-          <a href="#" class="card-link" routerLink="/Grupos">Nuevos grupos</a>
+          <a href="#" class="card-link" (click)="misGrupos()">Mis grupos</a>
+          <a href="#" class="card-link" (click)="grupos()">Nuevos grupos</a>
         </div>
       </div>
     </div>
