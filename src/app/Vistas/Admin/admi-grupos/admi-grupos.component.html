@@ -6,7 +6,7 @@
     <li class= "booking-card">
       <div class="book-container">
         <div class="content">
-          <button (click) = "ActualizarClick()" class="btn">Actualizar Grupo</button>
+          <button routerLink="/actualizarGrupo" routerLinkActive="active" (click) = "ActualizarClick()" class="btn">Actualizar Grupo</button>
         </div>
       </div>
       <div class="informations-container">
@@ -15,7 +15,7 @@
         <div class="more-information">
           <div class="info-and-date-container">
             <div class="cajita">
-              <button routerlink = "/gestionGrupos" (click) = "GestionClick()" type="submit" class="btn btn-primary">Gestion Miembros</button>
+              <button routerLink="/gestionGrupos" routerLinkActive="active" (click) = "GestionClick()" type="submit" class="btn btn-primary">Gestion Miembros</button>
             </div>
             <div class="cajita">
                 <button (click) = "DeleteClick()" class="btn btn-danger">Eliminar</button>

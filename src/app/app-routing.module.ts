@@ -24,9 +24,11 @@ import { ModiCarreraComponent } from './Vistas/Admin/modi-carrera/modi-carrera.c
 import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.component';
 import {AdmiGruposComponent} from './Vistas/Admin/admi-grupos/admi-grupos.component';
 import {GestionMiembrosGrupoComponent} from './Vistas/Admin/gestion-miembros-grupo/gestion-miembros-grupo.component';
+import {ActualizarGrupoComponent} from './Vistas/Admin/actualizar-grupo/actualizar-grupo.component';
+import {ActividadesGrupoComponent} from './Vistas/Atleta/actividades-grupo/actividades-grupo.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/admigrupos', pathMatch: 'full' },
+  {path: '', redirectTo: '/actividadesGrupo', pathMatch: 'full' },
   {path: 'Login', component: LoginComponent},
   {path: 'SignIn', component: SignInComponent},
   {path: 'friendSearch', component: FriendsComponent},
@@ -50,7 +52,9 @@ const routes: Routes = [
   {path: 'participantesCategoria', component: ParticipantesPorCategoriasComponent},
   {path: 'modiCarreras', component: ModiCarreraComponent},
   {path: 'modiRetos', component: ModiRetosComponent},
-  {path: 'gestionGrupos', component: GestionMiembrosGrupoComponent}
+  {path: 'gestionGrupos', component: GestionMiembrosGrupoComponent},
+  {path: 'actualizarGrupo', component: ActualizarGrupoComponent},
+  {path: 'actividadesGrupo', component: ActividadesGrupoComponent}
 ];
 
 @NgModule({
@@ -63,4 +67,4 @@ export const routingComponents = [LoginComponent, SignInComponent, FriendsCompon
   InicioComponent, RetosComponent, ProgresoComponent, AdmicarrerasComponent, AdmiretosComponent, UnirseGrupoComponent,
   MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent,
   ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent, AdmiGruposComponent ,
-  GestionMiembrosGrupoComponent];
+  GestionMiembrosGrupoComponent, ActualizarGrupoComponent, ActividadesGrupoComponent];

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {HttpClient, HttpResponse} from '@angular/common/http';
+
 
 @Component({
   selector: 'app-admi-grupos',
@@ -8,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class AdmiGruposComponent implements OnInit {
   grupos: any;
-  constructor(private router: Router) {
+  constructor(public httpService: HttpClient) {
     this.grupos = [
       {nombre: 'Moncho Bikers',
         idgrupo : '1'},
@@ -21,9 +22,13 @@ export class AdmiGruposComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  GestionClick(): void{
-    console.log('click en suscribirse');
+  GestionClick(): void {
+    console.log('Click en gestion');
   }
+  // GestionClick(): void{
+  //   this.httpService.post('http://localhost/APIStraviaTec/Usuario/buscarUsuario', { primernombre: this.search}).subscribe(
+  //     (resp: HttpResponse<any>) => { this.atletas = resp; console.log(resp); });
+  // }
 
   ActualizarClick(): void{
     console.log('click en Actualizar');

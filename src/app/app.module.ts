@@ -17,6 +17,8 @@ import { ModiCarreraComponent } from './Vistas/Admin/modi-carrera/modi-carrera.c
 import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.component';
 import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
 import {MessengerService} from './MessengerService';
+import { ActualizarGrupoComponent } from './Vistas/Admin/actualizar-grupo/actualizar-grupo.component';
+import { ActividadesGrupoComponent } from './Vistas/Atleta/actividades-grupo/actividades-grupo.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import {MessengerService} from './MessengerService';
     ModiCarreraComponent,
     ModiRetosComponent,
     SubsCarreraComponent,
+    ActualizarGrupoComponent,
+    ActividadesGrupoComponent,
   ],
   imports: [
     BrowserModule,
