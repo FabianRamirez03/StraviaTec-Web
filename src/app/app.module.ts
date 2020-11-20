@@ -16,6 +16,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ModiCarreraComponent } from './Vistas/Admin/modi-carrera/modi-carrera.component';
 import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.component';
 import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
+import {MessengerService} from './MessengerService';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.
     FormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [MessengerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
