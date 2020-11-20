@@ -16,6 +16,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ModiCarreraComponent } from './Vistas/Admin/modi-carrera/modi-carrera.component';
 import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.component';
 import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
+import {DatePipe} from '@angular/common';
 import {MessengerService} from './MessengerService';
 
 @NgModule({
@@ -42,7 +43,7 @@ import {MessengerService} from './MessengerService';
     FormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [MessengerService],
+  providers: [MessengerService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

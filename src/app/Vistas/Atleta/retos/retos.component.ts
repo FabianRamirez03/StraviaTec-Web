@@ -14,7 +14,7 @@ export class RetosComponent implements OnInit {
   mensaje: any;
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
     this.messengerService.message.subscribe(value => {this.atleta = value; });
-    this.httpService.post('http://localhost/APIStraviaTec/Retos/retosDisponibles', { primernombre: this.atleta.idusuario}).subscribe(
+    this.httpService.post('http://localhost/APIStraviaTec/Retos/retosDisponibles', { Idusuario: this.atleta.idusuario}).subscribe(
       (resp: HttpResponse<any>) => { this.eventos = resp; console.log(resp); });
   }
 
