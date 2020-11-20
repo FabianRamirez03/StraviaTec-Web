@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import * as L from 'leaflet';
+import {leafletImage} from 'leaflet-image';
 
 @Component({
   selector: 'app-card-actividad',
@@ -40,6 +41,17 @@ export class CardActividadComponent implements OnInit {
       map.fitBounds(e.target.getBounds());
     });
     gpxHTml.addTo(this.map);
+    leafletImage(map, (err, canvas) => {
+      // now you have canvas
+      // example thing to do with that canvas:
+      const img = document.createElement('img');
+      const dimensions = map.getSize();
+      img.width = dimensions.x;
+      img.height = dimensions.y;
+      img.src = canvas.toDataURL();
+      document.getElementById('mapImage').innerHTML = '';
+      document.getElementById('mapImage').appendChild(img);
+    });
 
   }
   private overwriteXML(): void{
