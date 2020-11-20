@@ -20,7 +20,7 @@ export class MapComponent implements AfterViewInit  {
     this.initMap();
   }
 
-  private initMap(): void {
+  initMap(): void {
     const map = L.map('map');
     this.map = map;
     const tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {

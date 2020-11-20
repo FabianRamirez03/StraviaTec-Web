@@ -25,7 +25,7 @@
           <div class="mr-2">
             <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
           </div>
-          <div class="h5">{{"@"+atleta.nombreusuario}}</div>
+          <div class="h5">@{{atleta.nombreUsuario}}</div>
           <div class="h7 text-muted">{{atleta.primernombre + " " + atleta.apellidos}}</div>
           <div class="h7"> profesional en béisbol, baloncesto, natacion.
           </div>
@@ -44,8 +44,14 @@
     </div>
     <div class="col-md-6 gedf-main">
 
+      <ng-container *ngFor="let athlete of atletas; let i = index">
+        <div>
+          <div id="map{{i}}" style="width: 100%; height: 140px;"></div>
+        </div>
+        <input type="button" value="Cargar" (click)="mapa()" >
+      </ng-container>
       <!--- \\\\\\\Post-->
-      <app-card-actividad [atleta]="athlete" [xmlText]="xml" *ngFor="let athlete of atletas"></app-card-actividad>
+<!--      <app-card-actividad [atleta]="athlete" [xmlText]="xml" *ngFor="let athlete of atletas"></app-card-actividad>-->
       <!-- Post /////-->
 
 
