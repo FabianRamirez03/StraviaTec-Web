@@ -13,6 +13,7 @@ export class AdmicarrerasComponent implements OnInit {
   retos: any;
   administrador: any;
   constructor(public httpService: HttpClient, private router: Router, public dialog: MatDialog) {
+
     this.retos = ['Mariana', 'Julio', 'Mariana', 'Julio', 'Mariana', 'Julio'];
   }
   misCarreras(): void{}
