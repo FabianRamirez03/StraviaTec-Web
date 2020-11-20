@@ -14,7 +14,7 @@ export class RetosComponent implements OnInit {
   mensaje: any;
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
     this.messengerService.message.subscribe(value => {this.atleta = value; });
-    this.httpService.post('http://localhost/APIStraviaTec/Retos/retosDisponibles', { primernombre: this.atleta.idusuario}).subscribe(
+    this.httpService.post('http://localhost/APIStraviaTec/Retos/retosDisponibles', { Idusuario: this.atleta.idusuario}).subscribe(
       (resp: HttpResponse<any>) => { this.eventos = resp; console.log(resp); });
   }
 
@@ -23,7 +23,7 @@ export class RetosComponent implements OnInit {
   suscribirse(reto: any): void{
     this.httpService.post('http://localhost/APIStraviaTec/Retos/addUser',
       { Iddeportista: this.atleta.idusuario, Idreto: reto.Idreto}).subscribe(
-      (resp: HttpResponse<any>) => { this.mensaje = resp; console.log(resp); });
+      (resp: HttpResponse<any>) => { this.mensaje = resp; console.log(resp); alert('Suscrito correctamente! :)')});
   }
   retos(): void{}
 

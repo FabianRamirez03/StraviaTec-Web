@@ -27,7 +27,7 @@ export class SubsCarreraComponent implements OnInit {
       { Idusuario: this.atleta.idusuario, Idcarrera: this.carrera.idcarrera,
         Categoria: (document.getElementById('categoria') as HTMLInputElement).value,
       Recibo: this.imageByte}).subscribe(
-      (resp: HttpResponse<any>) => { this.ans = resp; console.log(resp); });
+      (resp: HttpResponse<any>) => { this.ans = resp; console.log(resp); alert('Afiliación Enviada :)'); });
   }
 
   setByteArray(files): void {
