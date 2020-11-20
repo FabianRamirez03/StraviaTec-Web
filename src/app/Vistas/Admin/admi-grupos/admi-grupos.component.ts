@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-admi-grupos',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdmiGruposComponent implements OnInit {
   grupos: any;
-  constructor() {
+  constructor(private router: Router) {
     this.grupos = [
       {nombre: 'Moncho Bikers',
         idgrupo : '1'},

@@ -62,5 +62,5 @@ export const routingComponents = [LoginComponent, SignInComponent, FriendsCompon
   ActivityPageComponent, AddActivtyComponent, ActivityInfoComponent, EditProfileComponent, CarrerasComponent,
   InicioComponent, RetosComponent, ProgresoComponent, AdmicarrerasComponent, AdmiretosComponent, UnirseGrupoComponent,
   MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent,
-  ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent];
-  ParticipantesPorCategoriasComponent, AdmiGruposComponent];
+  ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent, AdmiGruposComponent ,
+  GestionMiembrosGrupoComponent];
