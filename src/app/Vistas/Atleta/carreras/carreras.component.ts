@@ -14,14 +14,13 @@ export class CarrerasComponent implements OnInit {
   mensaje: any;
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
     this.messengerService.message.subscribe(value => {this.atleta = value; });
-    this.httpService.post('http://localhost/APIStraviaTec/Carrera/carrerasDisponbles', { primernombre: this.atleta.categoria}).subscribe(
+    this.httpService.post('http://localhost/APIStraviaTec/Carrera/carrerasDisponbles', { categoria: this.atleta.categoria}).subscribe(
       (resp: HttpResponse<any>) => { this.eventos = resp; console.log(resp); });
   }
   carreras(carrera: void): void{
     this.mensaje = [this.atleta, carrera];
     this.messengerService.setMessage(this.mensaje);
   }
-  suscribirse(): void{}
   ngOnInit(): void {
   }
 
