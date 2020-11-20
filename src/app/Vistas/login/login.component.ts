@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
   usuario: string;
   contrasena: string;
   existe: any;
-  private messageSubscription: Subscription;
 
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {}
   login(): void{
@@ -24,9 +23,7 @@ export class LoginComponent implements OnInit {
       (resp: HttpResponse<number>) => { this.existe = resp;
                                         if (this.existe.validacion ===  1){
           console.log('twins');
-          this.messageSubscription = this.messengerService.message.subscribe(m => {
-                                             this.messengerService.setMessage(this.usuario);
-                                           });
+          this.messengerService.setMessage(this.usuario);
           this.router.navigate(['/', 'inicio']);
         }
       else{

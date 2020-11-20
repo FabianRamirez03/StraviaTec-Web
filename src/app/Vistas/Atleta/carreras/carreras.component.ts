@@ -13,6 +13,7 @@ export class CarrerasComponent implements OnInit {
   atleta: any;
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
     this.messengerService.message.subscribe(value => {this.atleta = value; });
+
     this.eventos = ['Mariana', 'Julio', 'Julio'];
   }
   carreras(): void{}

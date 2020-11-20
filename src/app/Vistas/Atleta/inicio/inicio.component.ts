@@ -28,40 +28,29 @@ export class InicioComponent implements OnInit {
   }
   misRetos(): void{
     alert(this.atleta);
-    this.messageSubscription = this.messengerService.message.subscribe(m => {
-      this.messengerService.setMessage(this.atleta);
-    });
+    this.messengerService.setMessage(this.atleta);
     this.router.navigate(['/', 'progreso']);
   }
   retos(): void{
-    this.messageSubscription = this.messengerService.message.subscribe(m => {
-      this.messengerService.setMessage(this.atleta);
-    });
+    this.messengerService.setMessage(this.atleta);
     this.router.navigate(['/', 'retos']);
   }
-  misCarreras(atleta): void{
+  misCarreras(): void{
     alert(this.atleta);
-    this.messageSubscription = this.messengerService.message.subscribe(m => {
-      this.messengerService.setMessage(atleta.nombreusuario);
-    });
+    this.messengerService.setMessage(this.atleta);
     this.router.navigate(['/', 'friendSearch']);
   }
   carreras(): void {
-    this.messageSubscription = this.messengerService.message.subscribe(m => {
-      this.messengerService.setMessage(this.atleta);
-    });
+    this.messengerService.setMessage(this.atleta);
     this.router.navigate(['/', 'carreras']);
   }
   misGrupos(): void{
-    this.messageSubscription = this.messengerService.message.subscribe(m => {
-      this.messengerService.setMessage(this.atleta);
-    });
+    alert('holi');
+    this.messengerService.setMessage(this.atleta);
     this.router.navigate(['/', 'misGrupos']);
   }
   grupos(): void {
-    this.messageSubscription = this.messengerService.message.subscribe(m => {
-      this.messengerService.setMessage(this.atleta);
-    });
+    this.messengerService.setMessage(this.atleta);
     this.router.navigate(['/', 'Grupos']);
   }
 

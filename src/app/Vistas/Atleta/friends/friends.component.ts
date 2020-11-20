@@ -13,7 +13,7 @@ export class FriendsComponent implements OnInit {
   atletas: any;
   atleta: any;
   private search: string;
-  private messageSubscription: Subscription;
+  mensaje: any;
 
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
     this.messengerService.message.subscribe(value => {this.atleta = value; });
@@ -27,7 +27,11 @@ export class FriendsComponent implements OnInit {
     this.httpService.post('http://localhost/APIStraviaTec/Usuario/buscarUsuario', { primernombre: this.search}).subscribe(
       (resp: HttpResponse<any>) => { this.atletas = resp; console.log(resp); });
   }
-  agregarAmigo(): void{}
+  agregarAmigo(amigo: any): void{
+    this.httpService.post('http://localhost/APIStraviaTec/Usuario/agregarAmigo',
+      { iduser: this.atleta.iduser, idamigo: amigo.idusuario }).subscribe(
+      (resp: HttpResponse<any>) => { this.mensaje = resp; console.log(resp); });
+  }
   ngOnInit(): void {
   }
 
