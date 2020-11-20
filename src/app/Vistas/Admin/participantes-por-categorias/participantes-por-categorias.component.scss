@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Assistant');
 
 /********card frame **************/
 .card {position: relative; border-radius: 3px;margin-bottom: 16px; background-color: transparent;}
@@ -174,4 +175,6 @@ h2{
 
 .right { grid-area: right; }
 
-
+.totalWidth{
+  width: 100%;
+}
