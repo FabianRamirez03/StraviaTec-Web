@@ -18,6 +18,8 @@ import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.compone
 import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
 import {DatePipe} from '@angular/common';
 import {MessengerService} from './MessengerService';
+import { CrearCarrerasComponent } from './Vistas/Admin/crear-carreras/crear-carreras.component';
+import { CrearRetosComponent } from './Vistas/Admin/crear-retos/crear-retos.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import {MessengerService} from './MessengerService';
     ModiCarreraComponent,
     ModiRetosComponent,
     SubsCarreraComponent,
+    CrearCarrerasComponent,
+    CrearRetosComponent,
   ],
   imports: [
     BrowserModule,
