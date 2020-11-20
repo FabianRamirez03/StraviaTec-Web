@@ -17,6 +17,7 @@ import { ModiCarreraComponent } from './Vistas/Admin/modi-carrera/modi-carrera.c
 import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.component';
 import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
 import {MessengerService} from './MessengerService';
+import { CardActividadComponent } from './Vistas/Atleta/card-actividad/card-actividad.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {MessengerService} from './MessengerService';
     ModiCarreraComponent,
     ModiRetosComponent,
     SubsCarreraComponent,
+    CardActividadComponent,
   ],
   imports: [
     BrowserModule,

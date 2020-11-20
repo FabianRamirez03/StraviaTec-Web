@@ -45,41 +45,7 @@
     <div class="col-md-6 gedf-main">
 
       <!--- \\\\\\\Post-->
-      <div class="card gedf-card" *ngFor="let atleta of atletas">
-        <div class="card-header">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="mr-2">
-                <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-              </div>
-              <div class="ml-2">
-                <div class="h5 m-0">{{"@"+atleta.nombreAmigo}}</div>
-                <div class="h7 text-muted">{{atleta.primernombre + " " + atleta.apellidos}}</div>
-              </div>
-            </div>
-            <div>
-            </div>
-          </div>
-
-        </div>
-        <div class="card-body">
-          <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>{{atleta.fecha}}</div>
-          <a class="card-link">
-            <h5 class="card-title">{{atleta.actividad}}</h5>
-          </a>
-
-          <p class="card-text">
-            {{"Tipo: "+atleta.tipo}}
-          </p>
-          <p class="card-text">
-            {{"Distancia: "+atleta.kilometros+"Km"}}
-          </p>
-        </div>
-        <app-map [xmlText]="xml" ></app-map>
-        <div class="card-footer">
-          <a  class="card-link"><i class="fa fa-gittip"></i> Like</a>
-        </div>
-      </div>
+      <app-card-actividad [atleta]="athlete" *ngFor="let athlete of atletas"></app-card-actividad>
       <!-- Post /////-->
 
 
