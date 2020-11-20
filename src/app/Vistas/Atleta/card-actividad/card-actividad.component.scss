@@ -25,3 +25,23 @@ body {
   content: none;
   display: none;
 }
+.map-container {
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 5px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: 80%;
+  width: 90%;
+  min-height: 100px;
+}
+
+#map {
+  height: 100%;
+}
