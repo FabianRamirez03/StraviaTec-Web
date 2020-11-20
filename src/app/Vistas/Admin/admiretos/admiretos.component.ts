@@ -9,7 +9,7 @@ import {ModiRetosComponent} from '../modi-retos/modi-retos.component';
 })
 export class AdmiretosComponent implements OnInit {
   retos: any;
-  reto: any;
+  administrador: any;
   constructor(public dialog: MatDialog) {
     this.retos = ['Mariana', 'Julio', 'Mariana', 'Julio', 'Mariana', 'Julio'];
   }
@@ -17,7 +17,7 @@ export class AdmiretosComponent implements OnInit {
   ngOnInit(): void {
   }
   openDialog(retomod: object[], modify: boolean): void {
-    const param = [retomod, modify, this.reto];
+    const param = [retomod, modify, this.administrador];
     const dialogRef = this.dialog.open(ModiRetosComponent, {
       width: '70%',
       height: '70%',

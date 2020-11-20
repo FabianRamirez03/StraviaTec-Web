@@ -1,1 +1,181 @@
-<p>modi-carrera works!</p>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $.validator.setDefaults({
+      highlight: function(element){
+        $(element)
+          .closest('.form-group')
+          .addClass('has-error')
+      },
+      unhighlight: function(element){
+        $(element)
+          .closest('.form-group')
+          .removeClass('has-error')
+      }
+    });
+    // Material Select Initialization
+    $('.mdb-select').materialSelect();
+    $.validate({
+      rules:
+        {
+          password: "Requerido",
+          birthDate: "Requerido",
+          weight: {
+            required:true,
+            number:true
+          },
+          height:  {
+            required:true,
+            number:true
+          },
+          email: {
+            required: true,
+            email: true
+          }
+        },
+      messages:{
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      password: {
+        required: " Ingrese una contraseña"
+      },
+      birthDate: {
+        required: " Ingrese una fecha"
+      },
+      email: {
+        required: ' Ingrese el email',
+        email: ' Ingrese un email válido'
+      },
+      weight: {
+        required: " Ingrese su peso",
+        number: " Solo se aceptan números"
+      },
+      height: {
+        required: " Ingrese su altura",
+        number: " Solo se aceptan números"
+      },
+    })
+    $("input:checkbox").on('click', function() {
+      // in the handler, 'this' refers to the box clicked on
+      var $box = $(this);
+      if ($box.is(":checked")) {
+        // the name of the box is retrieved using the .attr() method
+        // as it is assumed and expected to be immutable
+        var group = "input:radio[name='" + $box.attr("name") + "']";
+        // the checked state of the group/box on the other hand will change
+        // and the current value is retrieved using .prop() method
+        $(group).prop("checked", false);
+        $box.prop("checked", true);
+      } else {
+        $box.prop("checked", false);
+      }
+    });
+  })
+</script>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+<div class="container">
+  <form class="form-horizontal" role="form">
+    <h3>Crear cuenta</h3>
+    <div class="form-group">
+      <label for="name" class="col-sm-3 control-label">Nombre*</label>
+      <div class="col-sm-9">
+        <input type="text" id="name" placeholder="nombre" class="form-control" autofocus>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inicioDate" class="col-sm-3 control-label">Fecha de la carrera*</label>
+      <div class="col-sm-9">
+        <input type="date" id="inicioDate" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="recorrido" class="col-sm-3 control-label">Recorrido*</label>
+      <div class="col-sm-9">
+        <input type="text" id="recorrido" placeholder="nombre" class="form-control" autofocus>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="tipo" class="col-sm-3 control-label">Tipo</label>
+      <div class="col-sm-9">
+        <select class="form-control" id="tipo" name="platform" required="required">
+          <option value="kayak">kayak</option>
+          <option value="Correr">Correr</option>
+          <option value="Nadar">Nadar</option>
+          <option value="Ciclismo">Ciclismo</option>
+          <option value="Senderismo">Senderismo</option>
+          <option value="Caminata">Caminata</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="Carrera" class="col-sm-3 control-label">Carrera</label>
+      <div class="col-sm-9">
+        <select class="form-control" id="Carrera" name="platform" required="required">
+          <option value="Fondo">Publico</option>
+          <option value="Altitud">Grupo</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="costo" class="col-sm-3 control-label">Costo*</label>
+      <div class="col-sm-9">
+        <input type="text" id="costo" placeholder="nombre" class="form-control" autofocus>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="cuenta" class="col-sm-3 control-label">Cuenta Bancaria*</label>
+      <div class="col-sm-9">
+        <input type="text" id="cuenta" placeholder="nombre" class="form-control" autofocus>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="patrocinadores" class="col-sm-3 control-label">Patrocinadores</label>
+      <div class="col-sm-9">
+        <select class="mdb-select md-form" id="Patrocinadores" name="platform" required="required" multiple>
+          <option value="" disabled selected>Patrocinadores</option>
+          <option value="Junior">Junior</option>
+          <option value="Sub-23">Sub-23</option>
+          <option value="Elite">Elite</option>
+          <option value="MasterA">Master A</option>
+          <option value="MasterB">Master B</option>
+          <option value="MasterC">Master C</option>
+        </select>
+        <label class="mdb-main-label">Label example</label>
+        <button class="btn-save btn btn-primary btn-sm">Save</button>
+      </div>
+    </div>
+    <div class="form-group">
+
+      <label for="Categorias" class="col-sm-3 control-label">Categorias</label>
+      <div class="col-sm-9">
+        <select class="mdb-select md-form" id="Categorias" name="platform" required="required" multiple>
+          <option value="" disabled selected>Categorias</option>
+          <option value="Junior">Junior</option>
+          <option value="Sub-23">Sub-23</option>
+          <option value="Elite">Elite</option>
+          <option value="MasterA">Master A</option>
+          <option value="MasterB">Master B</option>
+          <option value="MasterC">Master C</option>
+        </select>
+        <label class="mdb-main-label">Label example</label>
+        <button class="btn-save btn btn-primary btn-sm">Save</button>
+      </div>
+    </div>
+    <!-- /.form-group -->
+    <div class="form-group">
+      <div class="col-sm-9 col-sm-offset-3">
+        <span class="help-block">*Requisitos obligatorios</span>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" >Registrar</button>
+  </form> <!-- /form -->
+</div> <!-- ./container -->
+</body>

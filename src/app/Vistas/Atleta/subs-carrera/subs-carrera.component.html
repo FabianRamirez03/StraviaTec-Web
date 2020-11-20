@@ -80,80 +80,30 @@
 <body>
 <div class="container">
   <form class="form-horizontal" role="form">
-    <h3>Crear cuenta</h3>
+    <h3>Subscribirse</h3>
     <div class="form-group">
-      <label for="name" class="col-sm-3 control-label">Nombre*</label>
+      <label for="categoria" class="col-sm-3 control-label">Categoria</label>
       <div class="col-sm-9">
-        <input type="text" id="name" placeholder="hola" class="form-control" autofocus>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inicioDate" class="col-sm-3 control-label">Fecha de inicio del reto*</label>
-      <div class="col-sm-9">
-        <input type="date" id="inicioDate" class="form-control">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="finaldate" class="col-sm-3 control-label">Fecha de finalizacion del reto*</label>
-      <div class="col-sm-9">
-        <input type="date" id="finaldate" class="form-control">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="tipo" class="col-sm-3 control-label">Tipo</label>
-      <div class="col-sm-9">
-        <select class="form-control" id="tipo" name="platform" required="required">
-          <option value="kayak">kayak</option>
-          <option value="Correr">Correr</option>
-          <option value="Nadar">Nadar</option>
-          <option value="Ciclismo">Ciclismo</option>
-          <option value="Senderismo">Senderismo</option>
-          <option value="Caminata">Caminata</option>
+        <select class="form-control" id="categoria" name="platform" required="required">
+          <option value="Afghanistan">Afghanistan</option>
+          <option value="Åland Islands">Åland Islands</option>
+          <option value="Albania">Albania</option>
         </select>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="Reto" class="col-sm-3 control-label">Reto</label>
-      <div class="col-sm-9">
-        <select class="form-control" id="Reto" name="platform" required="required">
-          <option value="Fondo">Publico</option>
-          <option value="Altitud">Grupo</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="patrocinadores" class="col-sm-3 control-label">Reto</label>
-      <div class="col-sm-9">
-        <select class="form-control" id="patrocinadores" name="platform" required="required">
-          <option value="Fondo">no lo se</option>
-          <option value="Altitud">bye</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-3">Reto</label>
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col-sm-4">
-            <label class="radio-inline">
-              <input type="radio" name="mobil[1][]"  id="Fondo">Fondo
-            </label>
-          </div>
-          <div class="col-sm-4">
-            <label class="radio-inline">
-              <input type="radio" name="mobil[1][]" id="Altitud">Altitud
-            </label>
-          </div>
-        </div>
       </div>
     </div>
     <!-- /.form-group -->
+    <div class="form-group">
+      <label class="col-sm-3 control-label" for="photo">Foto del recibo</label>
+      <div class="col-sm-9">
+        <input type="file" id="photo" accept=".png, .jpg"  #image (change)="setByteArray(image.files)" name="file" required="required">
+      </div>
+    </div>
     <div class="form-group">
       <div class="col-sm-9 col-sm-offset-3">
         <span class="help-block">*Requisitos obligatorios</span>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary btn-block" >Registrar</button>
+    <button type="submit" class="btn btn-primary btn-block" >Subscribirse</button>
   </form> <!-- /form -->
 </div> <!-- ./container -->
 </body>

@@ -15,6 +15,8 @@ import {HttpClient, HttpClientModule, HttpResponse} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ModiCarreraComponent } from './Vistas/Admin/modi-carrera/modi-carrera.component';
 import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.component';
+import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
+import {MessengerService} from './MessengerService';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.compone
     HomeFooterComponent,
     ModiCarreraComponent,
     ModiRetosComponent,
+    SubsCarreraComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,7 @@ import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.compone
     FormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [MessengerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
