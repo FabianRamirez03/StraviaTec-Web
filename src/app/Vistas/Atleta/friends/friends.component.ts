@@ -16,7 +16,6 @@ export class FriendsComponent implements OnInit {
   mensaje: any;
 
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
-    alert('holi');
     this.messengerService.message.subscribe(value => {this.atleta = value; });
   }
   openDialog(atletas: any): void{
