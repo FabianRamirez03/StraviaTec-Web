@@ -19,6 +19,8 @@ import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.
 import {MessengerService} from './MessengerService';
 import { ActualizarGrupoComponent } from './Vistas/Admin/actualizar-grupo/actualizar-grupo.component';
 import { ActividadesGrupoComponent } from './Vistas/Atleta/actividades-grupo/actividades-grupo.component';
+import { MisCarrerasComponent } from './Vistas/Atleta/mis-carreras/mis-carreras.component';
+import { GestionSolicitudesComponent } from './Vistas/Admin/gestion-solicitudes/gestion-solicitudes.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { ActividadesGrupoComponent } from './Vistas/Atleta/actividades-grupo/act
     SubsCarreraComponent,
     ActualizarGrupoComponent,
     ActividadesGrupoComponent,
+    MisCarrerasComponent,
+    GestionSolicitudesComponent,
   ],
   imports: [
     BrowserModule,

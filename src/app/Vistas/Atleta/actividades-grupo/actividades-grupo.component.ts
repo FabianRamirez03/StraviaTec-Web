@@ -69,4 +69,11 @@ export class ActividadesGrupoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  enviarSolicitud(): void{
+    console.log('Enviar solicitud');
+  }
+
+  unirseReto(): void{
+    console.log('Asocirse al reto');
+  }
 }

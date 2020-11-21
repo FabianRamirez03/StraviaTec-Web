@@ -26,6 +26,8 @@ import {AdmiGruposComponent} from './Vistas/Admin/admi-grupos/admi-grupos.compon
 import {GestionMiembrosGrupoComponent} from './Vistas/Admin/gestion-miembros-grupo/gestion-miembros-grupo.component';
 import {ActualizarGrupoComponent} from './Vistas/Admin/actualizar-grupo/actualizar-grupo.component';
 import {ActividadesGrupoComponent} from './Vistas/Atleta/actividades-grupo/actividades-grupo.component';
+import {MisCarrerasComponent} from './Vistas/Atleta/mis-carreras/mis-carreras.component';
+import {GestionSolicitudesComponent} from './Vistas/Admin/gestion-solicitudes/gestion-solicitudes.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/actividadesGrupo', pathMatch: 'full' },
@@ -54,17 +56,21 @@ const routes: Routes = [
   {path: 'modiRetos', component: ModiRetosComponent},
   {path: 'gestionGrupos', component: GestionMiembrosGrupoComponent},
   {path: 'actualizarGrupo', component: ActualizarGrupoComponent},
-  {path: 'actividadesGrupo', component: ActividadesGrupoComponent}
+  {path: 'actividadesGrupo', component: ActividadesGrupoComponent},
+  {path: 'misCarreras', component: MisCarrerasComponent},
+  {path: 'gestionSolicitudes', component: GestionSolicitudesComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
 export const routingComponents = [LoginComponent, SignInComponent, FriendsComponent, HomePageComponent,
   ActivityPageComponent, AddActivtyComponent, ActivityInfoComponent, EditProfileComponent, CarrerasComponent,
   InicioComponent, RetosComponent, ProgresoComponent, AdmicarrerasComponent, AdmiretosComponent, UnirseGrupoComponent,
   MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent,
   ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent, AdmiGruposComponent ,
-  GestionMiembrosGrupoComponent, ActualizarGrupoComponent, ActividadesGrupoComponent];
+  GestionMiembrosGrupoComponent, ActualizarGrupoComponent, ActividadesGrupoComponent, MisCarrerasComponent,
+  GestionSolicitudesComponent];
