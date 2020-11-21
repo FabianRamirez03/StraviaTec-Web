@@ -23,10 +23,11 @@ export class SubsCarreraComponent implements OnInit {
   ngOnInit(): void {
   }
   sub(): void{
-    this.httpService.post('http://localhost/APIStraviaTec/Carrera/addUser',
-      { Iddeportista: this.atleta.idusuario, Idcarrera: this.carrera.idcarrera,
-        Categoriacompite: (document.getElementById('categoria') as HTMLInputElement).value}).subscribe(
-      (resp: HttpResponse<any>) => { this.ans = resp; console.log(resp); });
+    this.httpService.post('http://localhost/APIStraviaTec/Afiliaciones/sendAfiliacion',
+      { Idusuario: this.atleta.idusuario, Idcarrera: this.carrera.idcarrera,
+        Categoria: (document.getElementById('categoria') as HTMLInputElement).value,
+      Recibo: this.imageByte}).subscribe(
+      (resp: HttpResponse<any>) => { this.ans = resp; console.log(resp); alert('Afiliación Enviada :)'); });
   }
 
   setByteArray(files): void {

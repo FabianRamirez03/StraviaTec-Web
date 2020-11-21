@@ -44,7 +44,8 @@ export class SignInComponent implements OnInit {
         Apellidos: (document.getElementById('lastName') as HTMLInputElement).value,
         Fechanacimiento: (document.getElementById('birthDate') as HTMLInputElement).value,
         Nacionalidad: (document.getElementById('country') as HTMLInputElement).value,
-        Foto: this.imageByte.toString()
+        Foto: this.imageByte.toString(),
+        Administra: 1
     };
     this.httpService.post('http://localhost/APIStraviaTec/Usuario/crearUsuario',
       nuevoUsuario).subscribe(

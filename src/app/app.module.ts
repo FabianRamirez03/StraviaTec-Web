@@ -18,8 +18,9 @@ import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.compone
 import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
 import {DatePipe} from '@angular/common';
 import {MessengerService} from './MessengerService';
-import { CrearCarrerasComponent } from './Vistas/Admin/crear-carreras/crear-carreras.component';
+import { CardActividadComponent } from './Vistas/Atleta/card-actividad/card-actividad.component';
 import { CrearRetosComponent } from './Vistas/Admin/crear-retos/crear-retos.component';
+import { CrearCarrerasComponent } from './Vistas/Admin/crear-carreras/crear-carreras.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CrearRetosComponent } from './Vistas/Admin/crear-retos/crear-retos.comp
     ModiCarreraComponent,
     ModiRetosComponent,
     SubsCarreraComponent,
+    CardActividadComponent,
     CrearCarrerasComponent,
     CrearRetosComponent,
   ],

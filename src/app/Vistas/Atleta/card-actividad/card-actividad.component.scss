@@ -1,0 +1,47 @@
+body {
+  background-color: #eeeeee;
+}
+
+.h7 {
+  font-size: 0.8rem;
+}
+
+.gedf-wrapper {
+  margin-top: 0.97rem;
+}
+
+@media (min-width: 992px) {
+  .gedf-main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .gedf-card {
+    margin-bottom: 2.77rem;
+  }
+}
+
+/**Reset Bootstrap*/
+.dropdown-toggle::after {
+  content: none;
+  display: none;
+}
+.map-container {
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 5px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: 80%;
+  width: 90%;
+  min-height: 100px;
+}
+
+#map {
+  height: 100%;
+}

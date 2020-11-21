@@ -1,6 +1,7 @@
-import {Component, AfterViewInit, Input} from '@angular/core';
+import {AfterViewInit, Component, Input} from '@angular/core';
 import * as L from 'leaflet';
 import 'leaflet-gpx';
+
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -9,15 +10,17 @@ import 'leaflet-gpx';
 export class MapComponent implements AfterViewInit  {
   private map;
   gpx;
-  @Input() gpxURL;
+  xml;
+  @Input() xmlText;
 
-  constructor() { }
+  constructor() {}
 
   ngAfterViewInit(): void {
+    this.overwriteXML();
     this.initMap();
   }
 
-  private initMap(): void {
+  initMap(): void {
     const map = L.map('map');
     this.map = map;
     const tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -26,9 +29,8 @@ export class MapComponent implements AfterViewInit  {
     });
     tiles.addTo(this.map);
     // tslint:disable-next-line:prefer-const
-    let url = this.gpxURL; // URL to your GPX file or the GPX itself
     let gpxHTml;
-    gpxHTml = new L.GPX(url, {
+    gpxHTml = new L.GPX(this.xml, {
       async: true,
       polyline_options: {
         color: 'orange',
@@ -42,5 +44,7 @@ export class MapComponent implements AfterViewInit  {
     gpxHTml.addTo(this.map);
 
   }
-
+  private overwriteXML(): void{
+    this.xml = 'data:application/xml;charset=UTF-8,' + encodeURIComponent(this.xmlText);
+  }
 }
