@@ -30,7 +30,9 @@ export class FriendsComponent implements OnInit {
   agregarAmigo(amigo: any): void{
     this.httpService.post('http://localhost/APIStraviaTec/Usuario/agregarAmigo',
       { iduser: this.atleta.iduser, idamigo: amigo.idusuario }).subscribe(
-      (resp: HttpResponse<any>) => { this.mensaje = resp; console.log(resp); });
+      (resp: HttpResponse<any>) => { this.mensaje = resp; console.log(resp); if (this.mensaje.var === false){
+        alert('Ya se encuentra en sus amigos');
+      }; });
   }
   ngOnInit(): void {
     alert(this.atleta.idusuario);

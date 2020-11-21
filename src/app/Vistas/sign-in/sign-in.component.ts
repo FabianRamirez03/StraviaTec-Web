@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Router} from '@angular/router';
+import {MessengerService} from '../../MessengerService';
 
 @Component({
   selector: 'app-sign-in',
@@ -18,7 +19,7 @@ export class SignInComponent implements OnInit {
   imageByte: string;
   existe: any;
 
-  constructor(public httpService: HttpClient, private router: Router) {
+  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
   }
 
   login(): void{
@@ -45,13 +46,15 @@ export class SignInComponent implements OnInit {
         Fechanacimiento: (document.getElementById('birthDate') as HTMLInputElement).value,
         Nacionalidad: (document.getElementById('country') as HTMLInputElement).value,
         Foto: this.imageByte.toString(),
-        Administra: 1
+        Administra: Number((document.getElementById('type') as HTMLInputElement).value)
     };
     this.httpService.post('http://localhost/APIStraviaTec/Usuario/crearUsuario',
       nuevoUsuario).subscribe(
-      (resp: HttpResponse<any>) => { this.router.navigate(['/inicio']);
+      (resp: HttpResponse<any>) => { this.messengerService.setMessage(nuevoUsuario.NombreUsuario);
+                                     this.router.navigate(['/', 'admigrupos']);
         });
-    this.router.navigate(['/inicio']);
+    this.messengerService.setMessage(nuevoUsuario.NombreUsuario);
+    this.router.navigate(['/', 'admigrupos']);
   }
 
   ngOnInit(): void {
