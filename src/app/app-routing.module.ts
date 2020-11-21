@@ -31,7 +31,7 @@ import {GestionSolicitudesComponent} from './Vistas/Admin/gestion-solicitudes/ge
 import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/actividadesGrupo', pathMatch: 'full' },
+  {path: '', redirectTo: '/Login', pathMatch: 'full' },
   {path: 'Login', component: LoginComponent},
   {path: 'SignIn', component: SignInComponent},
   {path: 'friendSearch', component: FriendsComponent},

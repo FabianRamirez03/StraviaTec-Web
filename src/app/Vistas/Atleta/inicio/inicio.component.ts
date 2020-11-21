@@ -18,7 +18,7 @@ export class InicioComponent implements AfterViewChecked {
   flag = true;
   following: any;
   followers: any;
-  resp: any
+  resp: any;
   private messageSubscription: Subscription;
 
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
