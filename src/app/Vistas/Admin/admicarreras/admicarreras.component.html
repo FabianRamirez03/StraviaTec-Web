@@ -29,8 +29,8 @@
           </div>
         </div>
         <div class="footer">
-          <a routerLink="/modiCarreras" class="Cbtn Cbtn-primary">Modificar</a>
-          <a class="Cbtn Cbtn-danger">Eliminar</a>
+          <a routerLink="/modiCarreras" (click)="modificarCarreras(carrera)" class="Cbtn Cbtn-primary">Modificar</a>
+          <a class="Cbtn Cbtn-danger" (click)="eliminarCarrera(carrera)">Eliminar</a>
         </div>
       </div>
     </div>

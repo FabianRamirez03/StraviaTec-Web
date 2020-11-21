@@ -14,8 +14,7 @@ export class AdmicarrerasComponent implements OnInit {
   carreras: any;
   administrador: any;
   atleta: any;
-  constructor(public httpService: HttpClient, private router: Router,
-              public dialog: MatDialog, private messengerService: MessengerService) {
+  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
     this.messengerService.message.subscribe(value => {this.atleta = value; });
     this.httpService.post('http://localhost/APIStraviaTec/Carrera/carrerasPorUsuario',
       { Idusuario: this.atleta.Idusuario}).subscribe(
@@ -25,22 +24,16 @@ export class AdmicarrerasComponent implements OnInit {
     this.messengerService.setMessage(carrera);
   }
   nuevaCarreras(): void{
-    const nuevo = {
-      Idorganizador: 'id organizador',
-      Nombrecarrera: 'nombre carrera',
-      Fechacarrera: 'fecha carrera',
-      Tipoactividad: 'tipo de actividad',
-      Recorrido: 'recorrido',
-      Privada: 'privada',
-      Costo: 'costo',
-      Cuentabancaria: 'cuenta bancaria' };
-    this.messengerService.setMessage(nuevo);
+    this.messengerService.setMessage(this.administrador);
   }
   eliminarCarrera(carrera: any): void{
 
     this.httpService.post('http://localhost/APIStraviaTec/Carrera/delete',
       { Idcarrera: carrera.Idcarrera}).subscribe(
       (resp: HttpResponse<any>) => { this.carreras = resp; console.log(resp); });
+  }
+  suscritos(carrera: any): void{
+    this.messengerService.setMessage(carrera);
   }
 
   ngOnInit(): void {

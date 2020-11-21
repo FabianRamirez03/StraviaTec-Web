@@ -11,12 +11,12 @@
 <section id="gallery">
   <div class="container" style="min-width: 75%">
     <div class="row">
-      <div class="col-md-4 mx-auto my-1" style="padding: 10px" *ngFor="let activity of actividades">
+      <div class="col-md-4 mx-auto my-1" style="padding: 10px" *ngFor="let activity of patrocinadores">
         <div class="card card-inverse card-info">
-          <img class="card-img-top" src="{{activity.image}}">
+          <img class="card-img-top" src="{{activity.Foto}}">
           <div class="card-block">
             <figure class="profile profile-inline">
-              <img src="{{activity.image}}" class="profile-avatar" alt="">
+              <img src="{{activity.Foto}}" class="profile-avatar" alt="">
             </figure>
             <h4 class="card-title">{{activity.nombre}}</h4>
             <div class="card-text">

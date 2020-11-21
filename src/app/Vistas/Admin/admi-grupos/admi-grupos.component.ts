@@ -15,8 +15,11 @@ export class AdmiGruposComponent implements OnInit {
   name: any;
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
     this.messengerService.message.subscribe(value => {this.name = value; });
-    this.httpService.post('http://localhost/APIStraviaTec/Usuario/porNombreUsuario', { Idusuario: this.admin.Idusuario}).subscribe(
-      (resp: HttpResponse<any>) => { this.admin = resp; console.log(resp); });
+    this.httpService.post('http://localhost/APIStraviaTec/Usuario/porNombreUsuario',
+      {nombreusuario: this.name}).subscribe((ans: HttpResponse<any>) => {this.admin = ans;
+                                                                         this.httpService.post('http://localhost/APIStraviaTec/Usuario/Groups',
+        {idusuario: this.admin.idusuario}).subscribe((resp: HttpResponse<any>) => {this.grupos = resp;
+                                                                                   console.log(this.grupos); }); });
   }
 
   ngOnInit(): void {
