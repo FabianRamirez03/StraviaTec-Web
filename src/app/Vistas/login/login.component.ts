@@ -28,6 +28,8 @@ export class LoginComponent implements OnInit {
         }
       else{
                                            console.log('notwins');
+                                           this.messengerService.setMessage(this.usuario);
+                                           this.router.navigate(['/', 'admigrupos']);
                                          }});
   }
 
