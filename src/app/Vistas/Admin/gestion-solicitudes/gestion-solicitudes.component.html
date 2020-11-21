@@ -1,0 +1,38 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+<app-admin-header></app-admin-header>
+<div class="footerActualizar">
+  <a routerLink="/inicio" routerLinkActive="active" href="#" class="Cbtn btn-light btn-lg">Volver</a>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor= "let solicitud of solicitudes">
+      <div class="tile">
+        <div class="wrapper">
+          <img src= {{solicitud.recibo}} style="height:350px; width:315px; border: 1px solid black; position:relative; background-size: cover">
+          <div class="stats">
+            <div>
+              <strong>Nombre Carrera: </strong> {{solicitud.nombreCarrera}}
+            </div>
+            <div>
+              <strong>ID Deportista: </strong> {{solicitud.idUsuario}}
+            </div>
+            <div>
+              <strong>Nombre Deportista: </strong> {{solicitud.nombreUsuario}}
+            </div>
+          </div>
+          <div class="footer">
+            <button  (click)="aceptarSolicitud(solicitud.nombreUsuario)" class="btn-block btn-primary">Aceptar</button>
+            <button class="btn-block btn-danger">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

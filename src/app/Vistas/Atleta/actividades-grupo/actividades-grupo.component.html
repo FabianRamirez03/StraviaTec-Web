@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<app-home-header></app-home-header>
+<div class="body"></div>
+<ul>
+  <div *ngFor="let reto of retosGrupo">
+    <li class= "booking-card">
+      <div class="book-container">
+        <div class="content">
+          <button  class="btn">Unirse al Reto</button>
+        </div>
+      </div>
+      <div class="informations-container">
+        <h2 class="title"> Reto: {{reto.nombreReto}} </h2>
+        <p class="sub-title">ID: {{reto.idReto}}</p>
+        <p class="sub-title">Tipo de actividad: {{reto.tipoActividad}}</p>
+        <p class="sub-title">Tipo de reto: {{reto.tipoReto}}</p>
+        <p class="sub-title">Inicio del reto: {{reto.fechaInicia}}</p>
+        <p class="sub-title">Fin del reti: {{reto.fechaFinaliza}}</p>
+        <p class="sub-title">Objetivo: {{reto.objetivo}}Km</p>
+      </div>
+    </li>
+  </div>
+
+  <div *ngFor="let carrera of carrerasGrupo">
+    <li class= "booking-card">
+      <div class="book-container">
+        <div class="content">
+          <button  class="btn">Enviar Solicitud</button>
+        </div>
+      </div>
+      <div class="informations-container">
+        <h2 class="title">Carrera: {{carrera.nombreCarrera}}</h2>
+        <p class="sub-title">ID: {{carrera.idCarrera}}</p>
+        <p class="sub-title">Fecha: {{carrera.fecha}}</p>
+        <p class="sub-title">Tipo Actividad: {{carrera.tipoActividad}}</p>
+        <p class="sub-title">Costo: ₡{{carrera.costo}} </p>
+        <p class="sub-title">Cuenta Bancaria: {{carrera.cuenta}}</p>
+        <p class="sub-title">Mapa: {{carrera.mapa}}</p>
+      </div>
+    </li>
+  </div>
+</ul>
