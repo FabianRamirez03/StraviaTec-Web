@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {StateServiceService } from '../../../../Services/state-service.service';
 import * as L from 'leaflet';
-import {toNumbers} from '@angular/compiler-cli/src/diagnostics/typescript_version';
 
 
 @Component({
