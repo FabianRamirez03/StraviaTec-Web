@@ -13,15 +13,15 @@ import {MessengerService} from '../../../MessengerService';
 export class AdmicarrerasComponent implements OnInit {
   carreras: any;
   administrador: any;
-  atleta: any;
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
-    this.messengerService.message.subscribe(value => {this.atleta = value; });
+    this.messengerService.message.subscribe(value => {this.administrador = value[1]; });
+    console.log(this.administrador);
     this.httpService.post('http://localhost/APIStraviaTec/Carrera/carrerasPorUsuario',
-      { Idusuario: this.atleta.Idusuario}).subscribe(
+      { idusuario: this.administrador.idusuario}).subscribe(
       (resp: HttpResponse<any>) => { this.carreras = resp; console.log(resp); });
   }
   modificarCarreras(carrera: any): void{
-    this.messengerService.setMessage(carrera);
+    this.messengerService.setMessage([carrera, this.administrador]);
   }
   nuevaCarreras(): void{
     this.messengerService.setMessage(this.administrador);
@@ -29,7 +29,7 @@ export class AdmicarrerasComponent implements OnInit {
   eliminarCarrera(carrera: any): void{
 
     this.httpService.post('http://localhost/APIStraviaTec/Carrera/delete',
-      { Idcarrera: carrera.Idcarrera}).subscribe(
+      { idcarrera: carrera.idCarrera}).subscribe(
       (resp: HttpResponse<any>) => { this.carreras = resp; console.log(resp); });
   }
   suscritos(carrera: any): void{

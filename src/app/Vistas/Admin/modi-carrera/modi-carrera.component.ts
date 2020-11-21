@@ -1,6 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {MessengerService} from '../../../MessengerService';
 
@@ -14,7 +14,28 @@ export class ModiCarreraComponent implements OnInit {
   carrera: any;
   modify: boolean;
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
-    this.messengerService.message.subscribe(value => {this.carrera = value; });
+    this.messengerService.message.subscribe(value => {this.carrera = value[0]; this.admin = value[1]; });
+    console.log(this.admin);
+  }
+  modificar(): void{
+    const carreraMod = {
+      Idcarrera: this.carrera.idcarrera,
+      Idorganizador: this.admin.idusuario,
+      Nombrecarrera: (document.getElementById('name') as HTMLInputElement).value,
+      Fechacarrera: this.carrera.idcarrera,
+      Tipoactividad: (document.getElementById('tipo') as HTMLInputElement).value,
+      Recorrido: this.carrera.Recorrido,
+      Privada: (document.getElementById('Carrera') as HTMLInputElement).value,
+      Costo: (document.getElementById('costo') as HTMLInputElement).value,
+      Cuentabancaria: (document.getElementById('cuenta') as HTMLInputElement).value,
+    };
+    this.httpService.post('http://localhost/APIStraviaTec/Carrera/modifCarrera',
+      carreraMod).subscribe(
+      (resp: HttpResponse<any>) => { this.carrera = resp; console.log(resp); });
+  }
+  volver(): void{
+    console.log(this.admin);
+    this.messengerService.setMessage([0, this.admin]);
   }
 
   ngOnInit(): void {

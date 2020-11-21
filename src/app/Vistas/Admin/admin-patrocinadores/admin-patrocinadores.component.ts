@@ -18,6 +18,8 @@ export class AdminPatrocinadoresComponent implements OnInit {
       { Idcarrera: this.carrera.Idcarrera}).subscribe(
       (resp: HttpResponse<any>) => { this.patrocinadores = resp; console.log(resp); });
   }
+  eliminar(patrocinador: void): void{
+  }
 
   ngOnInit(): void {
   }

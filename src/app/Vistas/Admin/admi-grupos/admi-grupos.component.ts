@@ -38,7 +38,7 @@ export class AdmiGruposComponent implements OnInit {
   }
 
   DeleteClick(grupo: any): void{
-    this.httpService.post('http://localhost/APIStraviaTec/Grupo/deleteGroup', { Idgrupo: grupo.Idgrupo}).subscribe(
+    this.httpService.post('http://localhost/APIStraviaTec/Grupo/deleteGroup', { idgrupo: grupo.idgrupo}).subscribe(
       (resp: HttpResponse<any>) => { this.grupos = resp; console.log(resp); });
   }
 

@@ -3,8 +3,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+<app-admin-header></app-admin-header>
 <div class="footerActualizar">
-  <a routerLink="/admigrupos" routerLinkActive="active" class="Cbtn btn-light btn-lg">Volver</a>
+  <a routerLink="/admigrupos" routerLinkActive="active" (click)="volver()" class="Cbtn btn-light btn-lg">Volver</a>
 </div>
 <div class="container-fluid">
   <div class="row">

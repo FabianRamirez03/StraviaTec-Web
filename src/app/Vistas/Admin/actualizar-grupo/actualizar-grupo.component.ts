@@ -19,11 +19,13 @@ export class ActualizarGrupoComponent implements OnInit {
     const nombre = (document.getElementById('NombreGrupo') as HTMLInputElement).value;
     console.log(nombre);
     console.log(this.admin);
-    this.httpService.post('http://localhost/APIStraviaTec/Grupo/modifyGroup', { Idgrupo: this.grupo.Idgrupo, Nombre: nombre}).subscribe(
-      (resp: HttpResponse<any>) => { const ans = resp; console.log(resp); });
+    this.httpService.post('http://localhost/APIStraviaTec/Grupo/modifyGroup',
+      { idgrupo: this.grupo.idgrupo, Nombre: nombre}).subscribe(
+      (resp: HttpResponse<any>) => { const ans = resp; console.log(ans); });
   }
   devolver(): any{
-    this.messengerService.setMessage(this.admin.Nombreusuario);
+    this.messengerService.setMessage(this.admin.nombreusuario);
+    console.log(this.admin.Nombreusuario);
   }
 
   ngOnInit(): void {

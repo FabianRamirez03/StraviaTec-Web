@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<app-home-header></app-home-header>
+<app-admin-header></app-admin-header>
 <div class="body"></div>
 <ul>
   <div *ngFor="let grupo of grupos">
     <li class= "booking-card">
       <div class="book-container">
         <div class="content">
-          <button routerLink="/actualizarGrupo" routerLinkActive="active" (click) = "ActualizarClick(grupo)" class="btn">Actualizar Grupo</button>
+          <button routerLink="/admicarreras" routerLinkActive="active" (click) = "ActualizarClick(grupo)" class="btn">Actualizar Grupo</button>
         </div>
       </div>
       <div class="informations-container">
