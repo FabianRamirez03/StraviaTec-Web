@@ -26,9 +26,14 @@ export class LoginComponent implements OnInit {
           this.messengerService.setMessage(this.usuario);
           this.router.navigate(['/', 'inicio']);
         }
-      else{
+                                        else if (this.existe.validacion ===  2){
                                            console.log('notwins');
-                                         }});
+                                           this.messengerService.setMessage(this.usuario);
+                                           this.router.navigate(['/', 'admigrupos']);
+                                         }
+      else{
+        alert('username o contrasena incorrecta');
+                                        }});
   }
 
   ngOnInit(): void {

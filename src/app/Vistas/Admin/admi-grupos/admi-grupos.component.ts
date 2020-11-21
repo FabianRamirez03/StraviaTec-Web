@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpResponse} from '@angular/common/http';
+import {Router} from '@angular/router';
+import {MessengerService} from '../../../MessengerService';
 
 
 @Component({
@@ -9,33 +11,35 @@ import {HttpClient, HttpResponse} from '@angular/common/http';
 })
 export class AdmiGruposComponent implements OnInit {
   grupos: any;
-  constructor(public httpService: HttpClient) {
-    this.grupos = [
-      {nombre: 'Moncho Bikers',
-        idgrupo : '1'},
-      {nombre: 'Ruedas de Heredia',
-        idgrupo: '2'},
-      {nombre: 'Cartago le pone',
-      idgrupo: '3'}];
+  admin: any;
+  name: any;
+  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
+    this.messengerService.message.subscribe(value => {this.name = value; });
+    this.httpService.post('http://localhost/APIStraviaTec/Usuario/porNombreUsuario',
+      {nombreusuario: this.name}).subscribe((ans: HttpResponse<any>) => {this.admin = ans;
+                                                                         this.httpService.post('http://localhost/APIStraviaTec/Usuario/Groups',
+        {idusuario: this.admin.idusuario}).subscribe((resp: HttpResponse<any>) => {this.grupos = resp;
+                                                                                   console.log(this.grupos); }); });
   }
 
   ngOnInit(): void {
   }
 
-  GestionClick(): void {
-    console.log('Click en gestion');
+  GestionClick(grupo: any): void {
+    this.messengerService.setMessage([grupo, this.admin]);
   }
   // GestionClick(): void{
   //   this.httpService.post('http://localhost/APIStraviaTec/Usuario/buscarUsuario', { primernombre: this.search}).subscribe(
   //     (resp: HttpResponse<any>) => { this.atletas = resp; console.log(resp); });
   // }
 
-  ActualizarClick(): void{
-    console.log('click en Actualizar');
+  ActualizarClick(grupo: any): void{
+    this.messengerService.setMessage([grupo, this.admin]);
   }
 
-  DeleteClick(): void{
-    console.log('click en Eliminar');
+  DeleteClick(grupo: any): void{
+    this.httpService.post('http://localhost/APIStraviaTec/Grupo/deleteGroup', { idgrupo: grupo.idgrupo}).subscribe(
+      (resp: HttpResponse<any>) => { this.grupos = resp; console.log(resp); });
   }
 
 }

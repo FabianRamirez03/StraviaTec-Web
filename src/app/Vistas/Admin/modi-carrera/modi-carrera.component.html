@@ -78,14 +78,18 @@
   })
 </script>
 <!------ Include the above in your HEAD tag ---------->
+<app-admin-header></app-admin-header>
 <body>
+<div class="footerActualizar">
+  <a routerLink="/admicarreras" routerLinkActive="active" (click)="volver()" class="Cbtn btn-light btn-lg">Volver</a>
+</div>
 <div class="container">
   <form class="form-horizontal" role="form">
-    <h3>Crear cuenta</h3>
+    <h3>Crear carrera</h3>
     <div class="form-group">
       <label for="name" class="col-sm-3 control-label">Nombre*</label>
       <div class="col-sm-9">
-        <input type="text" id="name" placeholder="nombre" class="form-control" autofocus>
+        <input type="text" id="name" placeholder="{{carrera.nombreCarrera}}" class="form-control" autofocus>
       </div>
     </div>
     <div class="form-group">
@@ -97,7 +101,7 @@
     <div class="form-group">
       <label for="recorrido" class="col-sm-3 control-label">Recorrido*</label>
       <div class="col-sm-9">
-        <input type="text" id="recorrido" placeholder="nombre" class="form-control" autofocus>
+        <input type="text" id="recorrido" placeholder="{{carrera.altura}}" class="form-control" autofocus>
       </div>
     </div>
     <div class="form-group">
@@ -118,7 +122,7 @@
       <div class="col-sm-9">
         <select class="form-control" id="Carrera" name="platform" required="required">
           <option value="Fondo">Publico</option>
-          <option value="Altitud">Grupo</option>
+          <option value="Altitud">Grupos</option>
         </select>
       </div>
     </div>
@@ -126,47 +130,14 @@
     <div class="form-group">
       <label for="costo" class="col-sm-3 control-label">Costo*</label>
       <div class="col-sm-9">
-        <input type="text" id="costo" placeholder="nombre" class="form-control" autofocus>
+        <input type="text" id="costo" placeholder="{{carrera.altura}}" class="form-control" autofocus>
       </div>
     </div>
 
     <div class="form-group">
       <label for="cuenta" class="col-sm-3 control-label">Cuenta Bancaria*</label>
       <div class="col-sm-9">
-        <input type="text" id="cuenta" placeholder="nombre" class="form-control" autofocus>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="patrocinadores" class="col-sm-3 control-label">Patrocinadores</label>
-      <div class="col-sm-9">
-        <select class="mdb-select md-form" id="Patrocinadores" name="platform" required="required" multiple>
-          <option value="" disabled selected>Patrocinadores</option>
-          <option value="Junior">Junior</option>
-          <option value="Sub-23">Sub-23</option>
-          <option value="Elite">Elite</option>
-          <option value="MasterA">Master A</option>
-          <option value="MasterB">Master B</option>
-          <option value="MasterC">Master C</option>
-        </select>
-        <label class="mdb-main-label">Label example</label>
-        <button class="btn-save btn btn-primary btn-sm">Save</button>
-      </div>
-    </div>
-    <div class="form-group">
-
-      <label for="Categorias" class="col-sm-3 control-label">Categorias</label>
-      <div class="col-sm-9">
-        <select class="mdb-select md-form" id="Categorias" name="platform" required="required" multiple>
-          <option value="" disabled selected>Categorias</option>
-          <option value="Junior">Junior</option>
-          <option value="Sub-23">Sub-23</option>
-          <option value="Elite">Elite</option>
-          <option value="MasterA">Master A</option>
-          <option value="MasterB">Master B</option>
-          <option value="MasterC">Master C</option>
-        </select>
-        <label class="mdb-main-label">Label example</label>
-        <button class="btn-save btn btn-primary btn-sm">Save</button>
+        <input type="text" id="cuenta" placeholder="{{carrera.altura}}" class="form-control" autofocus>
       </div>
     </div>
     <!-- /.form-group -->
@@ -175,7 +146,7 @@
         <span class="help-block">*Requisitos obligatorios</span>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary btn-block" >Registrar</button>
+    <button (click)="modificar()" class="btn btn-primary btn-block" >Registrar</button>
   </form> <!-- /form -->
 </div> <!-- ./container -->
 </body>

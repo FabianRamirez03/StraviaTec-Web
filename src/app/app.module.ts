@@ -16,7 +16,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ModiCarreraComponent } from './Vistas/Admin/modi-carrera/modi-carrera.component';
 import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.component';
 import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
+import {DatePipe} from '@angular/common';
 import {MessengerService} from './MessengerService';
+import { CardActividadComponent } from './Vistas/Atleta/card-actividad/card-actividad.component';
+import { CrearRetosComponent } from './Vistas/Admin/crear-retos/crear-retos.component';
+import { CrearCarrerasComponent } from './Vistas/Admin/crear-carreras/crear-carreras.component';
 import { ActualizarGrupoComponent } from './Vistas/Admin/actualizar-grupo/actualizar-grupo.component';
 import { ActividadesGrupoComponent } from './Vistas/Atleta/actividades-grupo/actividades-grupo.component';
 import { MisCarrerasComponent } from './Vistas/Atleta/mis-carreras/mis-carreras.component';
@@ -38,6 +42,9 @@ import { GestionSolicitudesComponent } from './Vistas/Admin/gestion-solicitudes/
     ActividadesGrupoComponent,
     MisCarrerasComponent,
     GestionSolicitudesComponent,
+    CardActividadComponent,
+    CrearCarrerasComponent,
+    CrearRetosComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +57,7 @@ import { GestionSolicitudesComponent } from './Vistas/Admin/gestion-solicitudes/
     FormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [MessengerService],
+  providers: [MessengerService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

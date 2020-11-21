@@ -85,9 +85,8 @@
       <label for="categoria" class="col-sm-3 control-label">Categoria</label>
       <div class="col-sm-9">
         <select class="form-control" id="categoria" name="platform" required="required">
-          <option value="Afghanistan">Afghanistan</option>
-          <option value="Åland Islands">Åland Islands</option>
-          <option value="Albania">Albania</option>
+          <option value="{{atleta.categoria}}">{{atleta.categoria}}</option>
+          <option value="Élite">Elite</option>
         </select>
       </div>
     </div>
@@ -103,7 +102,8 @@
         <span class="help-block">*Requisitos obligatorios</span>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary btn-block" >Subscribirse</button>
+    <button type="submit" class="btn btn-primary btn-block"  (click)="sub()">Subscribirse</button>
+    <button type="submit" class="btn btn-primary btn-block"  routerLink="/carrera">Volver</button>
   </form> <!-- /form -->
 </div> <!-- ./container -->
 </body>

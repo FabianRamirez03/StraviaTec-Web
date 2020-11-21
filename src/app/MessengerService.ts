@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
 export class MessengerService {
   private messageSource: BehaviorSubject<string> = new BehaviorSubject('initialValue');
   public message = this.messageSource.asObservable();
-  public setMessage(value: string): void{
+  public setMessage(value: any): void{
     this.messageSource.next(value);
   }
 }

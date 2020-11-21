@@ -16,8 +16,12 @@ export class UnirseGrupoComponent implements OnInit {
     this.httpService.post('http://localhost/APIStraviaTec/Usuario/Groups', { idusuario: this.atleta.idusuario}).subscribe(
       (resp: HttpResponse<any>) => { this.grupos = resp; console.log(resp); });
   }
-  gruposExist(): void{}
-  unirse(): void{}
+  unirse(grupo: any): void{
+    this.httpService.post('http://localhost/APIStraviaTec/Grupo/addUser',
+      { idusuario: this.atleta.idusuario, idgrupo: grupo.idgrupo}).subscribe(
+      (resp: HttpResponse<any>) => { this.grupos = resp; console.log(resp); });
+    alert('Fuiste agregado al grupo');
+  }
   ngOnInit(): void {
   }
 

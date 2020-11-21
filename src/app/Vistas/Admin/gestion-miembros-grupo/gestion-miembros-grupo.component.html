@@ -3,8 +3,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+<app-admin-header></app-admin-header>
 <div class="footerActualizar">
-  <a routerLink="/admigrupos" routerLinkActive="active" href="#" class="Cbtn btn-light btn-lg">Volver</a>
+  <a routerLink="/admigrupos" routerLinkActive="active" (click)="volver()" class="Cbtn btn-light btn-lg">Volver</a>
 </div>
 <div class="container-fluid">
   <div class="row">
@@ -14,14 +15,14 @@
           <div class="imagen"></div>
           <div class="stats">
             <div>
-              <strong>Nombre: </strong> {{deportista.nombre}}
+              <strong>Nombre: </strong> {{deportista.nombre+" "+deportista.apellidos }}
             </div>
             <div>
-              <strong>Cedula: </strong> {{deportista.idDeportista}}
+              <strong>Cedula: </strong> {{deportista.idUsuario}}
             </div>
           </div>
           <div class="footer">
-            <button mat-button class = "btn-block btn-danger" (click) = "borrarDeportista()" >Eliminar</button>
+            <button mat-button class = "btn-block btn-danger" (click) = "borrarDeportista(deportista)" >Eliminar</button>
           </div>
         </div>
       </div>

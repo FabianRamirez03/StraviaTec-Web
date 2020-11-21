@@ -1,0 +1,162 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $.validator.setDefaults({
+      highlight: function(element){
+        $(element)
+          .closest('.form-group')
+          .addClass('has-error')
+      },
+      unhighlight: function(element){
+        $(element)
+          .closest('.form-group')
+          .removeClass('has-error')
+      }
+    });
+
+    $.validate({
+      rules:
+        {
+          password: "Requerido",
+          birthDate: "Requerido",
+          weight: {
+            required:true,
+            number:true
+          },
+          height:  {
+            required:true,
+            number:true
+          },
+          email: {
+            required: true,
+            email: true
+          }
+        },
+      messages:{
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      password: {
+        required: " Ingrese una contraseña"
+      },
+      birthDate: {
+        required: " Ingrese una fecha"
+      },
+      email: {
+        required: ' Ingrese el email',
+        email: ' Ingrese un email válido'
+      },
+      weight: {
+        required: " Ingrese su peso",
+        number: " Solo se aceptan números"
+      },
+      height: {
+        required: " Ingrese su altura",
+        number: " Solo se aceptan números"
+      },
+    })
+    $("input:checkbox").on('click', function() {
+      // in the handler, 'this' refers to the box clicked on
+      var $box = $(this);
+      if ($box.is(":checked")) {
+        // the name of the box is retrieved using the .attr() method
+        // as it is assumed and expected to be immutable
+        var group = "input:radio[name='" + $box.attr("name") + "']";
+        // the checked state of the group/box on the other hand will change
+        // and the current value is retrieved using .prop() method
+        $(group).prop("checked", false);
+        $box.prop("checked", true);
+      } else {
+        $box.prop("checked", false);
+      }
+    });
+  })
+</script>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+<div class="container">
+  <form class="form-horizontal" role="form">
+    <h3>Crear cuenta</h3>
+    <div class="form-group">
+      <label for="name" class="col-sm-3 control-label">Nombre*</label>
+      <div class="col-sm-9">
+        <input type="text" id="name" placeholder="Nombre de reto" class="form-control" autofocus>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inicioDate" class="col-sm-3 control-label">Fecha de inicio del reto*</label>
+      <div class="col-sm-9">
+        <input type="date" id="inicioDate" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="finaldate" class="col-sm-3 control-label">Fecha de finalizacion del reto*</label>
+      <div class="col-sm-9">
+        <input type="date" id="finaldate" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="tipo" class="col-sm-3 control-label">Tipo</label>
+      <div class="col-sm-9">
+        <select class="form-control" id="tipo" name="platform" required="required">
+          <option value="kayak">kayak</option>
+          <option value="Correr">Correr</option>
+          <option value="Nadar">Nadar</option>
+          <option value="Ciclismo">Ciclismo</option>
+          <option value="Senderismo">Senderismo</option>
+          <option value="Caminata">Caminata</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="Reto" class="col-sm-3 control-label">Reto</label>
+      <div class="col-sm-9">
+        <select class="form-control" id="Reto" name="platform" required="required">
+          <option value="Fondo">Publico</option>
+          <option value="Altitud">Grupo</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="patrocinadores" class="col-sm-3 control-label">Reto</label>
+      <div class="col-sm-9">
+        <select class="form-control" id="patrocinadores" name="platform" required="required">
+          <option value="Piros">Piros</option>
+          <option value="Treck">Treck</option>
+          <option value="San Antonio">San Antonio</option>
+          <option value="Gatorade">Gatorade</option>
+          <option value="Oh wheels">Oh Wheels</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Reto</label>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-4">
+            <label class="radio-inline">
+              <input type="radio" name="mobil[1][]"  id="Fondo">Fondo
+            </label>
+          </div>
+          <div class="col-sm-4">
+            <label class="radio-inline">
+              <input type="radio" name="mobil[1][]" id="Altitud">Altitud
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.form-group -->
+    <div class="form-group">
+      <div class="col-sm-9 col-sm-offset-3">
+        <span class="help-block">*Requisitos obligatorios</span>
+      </div>
+    </div>
+    <button type="submit" (click)="crear()" class="btn btn-primary btn-block" >Crear</button>
+  </form> <!-- /form -->
+</div> <!-- ./container -->
+</body>
