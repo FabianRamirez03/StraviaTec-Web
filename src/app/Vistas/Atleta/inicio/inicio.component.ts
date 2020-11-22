@@ -24,10 +24,7 @@ export class InicioComponent implements AfterViewChecked {
 
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService,
               @Inject(MessengerService) public recibido: MessengerService['usuario']) {
-    console.log(recibido);
     this.atleta = recibido.usuario;
-    console.log(this.atleta);
-    console.log(this.name);
     this.httpService.post('http://localhost/APIStraviaTec/Usuario/friendsActivity',
       {idusuario: this.atleta.idusuario}).subscribe((resp: HttpResponse<any>) => {this.atletas = resp;
                                                                                   console.log(this.atletas); });

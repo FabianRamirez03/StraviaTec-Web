@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {MessengerService} from '../../../MessengerService';
@@ -11,8 +11,9 @@ import {MessengerService} from '../../../MessengerService';
 export class CrearCarrerasComponent implements OnInit {
   carrera: any;
   admin: any;
-  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
-    this.messengerService.message.subscribe(value => {this.admin = value; });
+  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService,
+              @Inject(MessengerService) public recibido: MessengerService['usuario']) {
+    this.admin = recibido.usuario;
   }
   crear(): void{
     const carreraMod = {

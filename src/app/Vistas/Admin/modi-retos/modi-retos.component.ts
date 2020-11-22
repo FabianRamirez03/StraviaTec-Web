@@ -13,8 +13,10 @@ export class ModiRetosComponent implements OnInit {
   reto: any;
   modify: boolean;
   admin: any;
-  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
-    this.messengerService.message.subscribe(value => {this.reto = value[0]; this.admin = value[1]; });
+  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService,
+              @Inject(MessengerService) public recibido: MessengerService['usuario']) {
+    this.admin = recibido.usuario;
+    this.messengerService.message.subscribe(value => {this.reto = value; });
   }
   modificar(): void{
     const reto = {
@@ -31,9 +33,6 @@ export class ModiRetosComponent implements OnInit {
     this.httpService.post('http://localhost/APIStraviaTec/Retos/updateReto',
       reto).subscribe(
       (resp: HttpResponse<any>) => { this.reto = resp; console.log(resp); });
-  }
-  volver(): void{
-    this.messengerService.setMessage(this.admin);
   }
   ngOnInit(): void {
   }
