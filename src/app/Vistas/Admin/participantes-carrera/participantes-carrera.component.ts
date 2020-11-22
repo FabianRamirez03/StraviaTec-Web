@@ -16,7 +16,7 @@ export class ParticipantesCarreraComponent implements OnInit {
               @Inject(MessengerService) public recibido: MessengerService['usuario']) {
   this.admin = recibido.usuario;
   this.messengerService.message.subscribe(value => {this.carrera = value; });
-  this.httpService.post('http://localhost/APIStraviaTec/Carrera/participantesCarrera',
+  this.httpService.post('http://localhost/APIStraviaTec/Carrera/posicionesCarrera',
       { idcarrera: this.carrera.idCarrera}).subscribe(
       (resp: HttpResponse<any>) => { this.participantes = resp; console.log(resp); });
   }
