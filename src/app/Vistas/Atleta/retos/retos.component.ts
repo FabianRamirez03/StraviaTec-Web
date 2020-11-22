@@ -23,7 +23,7 @@ export class RetosComponent implements OnInit {
   }
   suscribirse(reto: any): void{
     this.httpService.post('http://localhost/APIStraviaTec/Retos/addUser',
-      { Iddeportista: this.atleta.idusuario, Idreto: reto.Idreto}).subscribe(
+      { Iddeportista: this.atleta.idusuario, Idreto: reto.idReto}).subscribe(
       (resp: HttpResponse<any>) => { this.mensaje = resp; console.log(resp); alert('Suscrito correctamente! :)')});
   }
   retos(): void{}
