@@ -1,0 +1,39 @@
+<app-home-header></app-home-header>
+
+<div class="grid-container">
+  <div class="left-column" style="padding-top: 40px">
+    <ng-container *ngFor="let carrera of Carreras; let i = index">
+    <h1 style="padding-left: 20px">{{carrera.nombCar}}</h1>
+      <div>
+        <div id="map{{i}}" style="width: 100%; height: 140px;"></div>
+      </div>
+      <div class="right-column" style="padding-top: 55px">
+        <table class="table table-borderless" style="font-size: large">
+          <tbody>
+          <tr>
+            <th scope="row">Fecha de la carrera: </th>
+            <td>{{carrera.fecha}} Km</td>
+          </tr>
+          <tr>
+            <th scope="row">Tipo de la carrera:</th>
+            <td>{{carrera.tipo}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Categoria Final:</th>
+            <td>{{carrera.categoria}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Costo: ₡</th>
+            <td>{{carrera.costo}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Cuenta Bancaria: </th>
+            <td>{{carrera.cuenta}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<app-home-footer></app-home-footer>
