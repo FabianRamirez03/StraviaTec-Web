@@ -18,9 +18,9 @@ export class CarrerasGrupoComponent implements AfterViewChecked {
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService,
               @Inject(MessengerService) public recibido: MessengerService['usuario']) {
     this.Atleta = recibido.usuario;
-    this.messengerService.message.subscribe(value => {this.Grupo = value; });
+    this.messengerService.message.subscribe(value => {this.Grupo = value; console.log(this.Grupo); });
     this.httpService.post('http://localhost/APIStraviaTec/Grupo/carrerasInGroup',
-      {Idgrupo: this.Grupo.Idgrupo}).subscribe((resp: HttpResponse <any>) => {this.Carreras = resp; });
+      {Idgrupo: this.Grupo.idgrupo}).subscribe((resp: HttpResponse <any>) => {this.Carreras = resp; console.log(this.Carreras); });
   }
 
   ngAfterViewChecked(): void {

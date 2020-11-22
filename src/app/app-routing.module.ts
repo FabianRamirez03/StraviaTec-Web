@@ -36,7 +36,7 @@ import {CarrerasGrupoComponent} from './Vistas/Atleta/carreras-grupo/carreras-gr
 import {C} from '@angular/cdk/keycodes';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/carrerasGrupo', pathMatch: 'full' },
+  {path: '', redirectTo: '/Login', pathMatch: 'full' },
   {path: 'Login', component: LoginComponent},
   {path: 'SignIn', component: SignInComponent},
   {path: 'friendSearch', component: FriendsComponent},
@@ -70,6 +70,7 @@ const routes: Routes = [
   {path: 'gestionSolicitudes', component: GestionSolicitudesComponent},
   {path: 'crearCarrera', component: CrearCarrerasComponent},
   {path: 'crearRetos', component: CrearRetosComponent},
+  {path: 'carrerasGrupo', component: CarrerasGrupoComponent}
 ];
 
 @NgModule({
@@ -84,4 +85,4 @@ export const routingComponents = [LoginComponent, SignInComponent, FriendsCompon
   MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent,
    SubsCarreraComponent, ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent, AdmiGruposComponent ,
   GestionMiembrosGrupoComponent, ActualizarGrupoComponent, ActividadesGrupoComponent, MisCarrerasComponent,
-  GestionSolicitudesComponent, CrearCarrerasComponent, CrearRetosComponent, CrearGruposComponent];
+  GestionSolicitudesComponent, CrearCarrerasComponent, CrearRetosComponent, CrearGruposComponent, CarrerasGrupoComponent];

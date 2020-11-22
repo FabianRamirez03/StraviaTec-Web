@@ -12,7 +12,7 @@
           <tbody>
           <tr>
             <th scope="row">Fecha de la carrera: </th>
-            <td>{{carrera.fecha}} Km</td>
+            <td>{{carrera.fecha}}</td>
           </tr>
           <tr>
             <th scope="row">Tipo de la carrera:</th>
@@ -23,13 +23,14 @@
             <td>{{carrera.categoria}}</td>
           </tr>
           <tr>
-            <th scope="row">Costo: ₡</th>
-            <td>{{carrera.costo}}</td>
+            <th scope="row">Costo:</th>
+            <td>₡ {{carrera.costo}}</td>
           </tr>
           <tr>
             <th scope="row">Cuenta Bancaria: </th>
             <td>{{carrera.cuenta}}</td>
           </tr>
+          <button routerLink="/carrerasGrupo" class="btn-block btn-primary">Enviar Solicitud</button>
           </tbody>
         </table>
       </div>
