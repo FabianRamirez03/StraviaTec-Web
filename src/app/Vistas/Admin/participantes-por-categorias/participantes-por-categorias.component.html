@@ -23,7 +23,7 @@
               </thead>
               <tbody>
               <tr *ngFor="let athlete of junior">
-                <td>{{athlete.nombre}}</td>
+                <td>{{athlete.primernombre + ' ' + athlete.apellidos}}</td>
                 <td>{{athlete.edad}}</td>
               </tr>
               </tbody>
@@ -57,7 +57,7 @@
               </thead>
               <tbody>
               <tr *ngFor="let athlete of open">
-                <td>{{athlete.nombre}}</td>
+                <td>{{athlete.primernombre + ' ' + athlete.apellidos}}</td>
                 <td>{{athlete.edad}}</td>
               </tr>
               </tbody>
@@ -74,7 +74,7 @@
               </thead>
               <tbody>
               <tr *ngFor="let athlete of masterA">
-                <td>{{athlete.nombre}}</td>
+                <td>{{athlete.primernombre + ' ' + athlete.apellidos}}</td>
                 <td>{{athlete.edad}}</td>
               </tr>
               </tbody>
@@ -91,7 +91,7 @@
               </thead>
               <tbody>
               <tr *ngFor="let athlete of masterB">
-                <td>{{athlete.nombre}}</td>
+                <td>{{athlete.primernombre + ' ' + athlete.apellidos}}</td>
                 <td>{{athlete.edad}}</td>
               </tr>
               </tbody>
@@ -125,7 +125,7 @@
               </thead>
               <tbody>
               <tr *ngFor="let athlete of Elite">
-                <td>{{athlete.nombre}}</td>
+                <td>{{athlete.primernombre + ' ' + athlete.apellidos}}</td>
                 <td>{{athlete.edad}}</td>
               </tr>
               </tbody>
@@ -149,13 +149,15 @@
             <th>Posición</th>
             <th>Nombre</th>
             <th>Edad</th>
+            <th>Tiempo</th>
           </tr>
           </thead>
           <tbody>
           <tr *ngFor="let athlete of porTiempo; let i = index">
             <td>{{i}}</td>
-            <td>{{athlete.nombre}}</td>
+            <td>{{athlete.nombre + ' ' + athlete.apellido}}</td>
             <td>{{athlete.edad}}</td>
+            <td>{{athlete.tiempo}}</td>
           </tr>
           </tbody>
         </table>
@@ -163,6 +165,5 @@
     </div>
   </div>
 </div>
-<app-home-footer></app-home-footer>
 </body>
 
