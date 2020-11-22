@@ -1,0 +1,37 @@
+body {
+  background: url(https://wmimg.azureedge.net/public/img/articles/why-are-east-african-runners-so-dominant-/why-are-east-african-runners-so-dominant-.jpg);
+  background-size: cover;
+  height: 100%;
+}
+
+*[role="form"] {
+  max-width: 100%;
+  min-height: 100%;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 20px;
+}
+
+*[role="form"] h2 {
+  font-family: 'Open Sans' , sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  min-height: 100%;
+  height: 100%;
+  color: #000000;
+  margin-top: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.container {
+  width: 500px;
+  clear: both;
+  top: calc(12%);
+  display: flex;
+  position: center;
+  max-height: 100%;
+}
+

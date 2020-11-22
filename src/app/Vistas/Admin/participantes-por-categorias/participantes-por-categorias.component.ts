@@ -1,9 +1,12 @@
-import { ViewChild } from '@angular/core';
+import {Inject, ViewChild} from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { jsPDF } from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import last from 'jspdf-autotable';
+import {HttpClient, HttpResponse} from '@angular/common/http';
+import {Router} from '@angular/router';
+import {MessengerService} from '../../../MessengerService';
 @Component({
   selector: 'app-participantes-por-categorias',
   templateUrl: './participantes-por-categorias.component.html',
@@ -249,9 +252,17 @@ export class ParticipantesPorCategoriasComponent implements OnInit {
   ];
   nombreCarrera = 'Carrera Lindora';
 
+  admin: any;
+  carrera: any;
+  participantes: any;
 
-
-  constructor() {
+  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService,
+              @Inject(MessengerService) public recibido: MessengerService['usuario']) {
+    this.admin = recibido.usuario;
+    this.messengerService.message.subscribe(value => {this.carrera = value; });
+    this.httpService.post('http://localhost/APIStraviaTec/Carrera/participantesCarrera',
+      { idcarrera: this.carrera.idCarrera}).subscribe(
+      (resp: HttpResponse<any>) => { this.participantes = resp; console.log(resp); });
   }
 
   ngOnInit(): void {

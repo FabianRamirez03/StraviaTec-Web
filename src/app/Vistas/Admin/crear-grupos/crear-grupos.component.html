@@ -1,0 +1,50 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $.validator.setDefaults({
+      highlight: function(element){
+        $(element)
+          .closest('.form-group')
+          .addClass('has-error')
+      },
+      unhighlight: function(element){
+        $(element)
+          .closest('.form-group')
+          .removeClass('has-error')
+      }
+    });
+
+    $.validate({
+      rules:
+        {
+          nombreGrupo: "Requerido",
+          birthDate: "Requerido",
+          },
+
+      nombreGrupo: {
+        required: " Ingrese el nombre del nuevo grupo"
+      },
+    })
+  })
+</script>
+<!------ Include the above in your HEAD tag ---------->
+<app-admin-header></app-admin-header>
+<body>
+<div class="container">
+  <form class="form-horizontal" role="form">
+    <h3>Crear Nuevo Grupo</h3>
+    <div class="form-group">
+      <label for="name" class="col-sm-3 control-label">Nombre Grupo*</label>
+      <div class="col-sm-9">
+        <input type="text" id="name" placeholder="Ingrese el nombre del grupo" class="form-control" autofocus>
+      </div>
+    </div>
+
+    <!-- /.form-group -->
+    <button type="submit"  (click)="crearGrupo()" class="btn btn-primary btn-block" >Crear Grupo</button>
+    <button routerLink="/inicio"  routerLinkActive="active" type="submit"  class="btn btn-danger btn-block" >Cancelar</button>
+  </form> <!-- /form -->
+</div> <!-- ./container -->
+</body>

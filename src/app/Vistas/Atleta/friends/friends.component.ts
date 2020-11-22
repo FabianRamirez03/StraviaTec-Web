@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {MessengerService} from '../../../MessengerService';
@@ -15,9 +15,9 @@ export class FriendsComponent implements OnInit {
   private search: string;
   mensaje: any;
 
-  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
-    alert('holi');
-    this.messengerService.message.subscribe(value => {this.atleta = value; });
+  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService,
+              @Inject(MessengerService) public recibido: MessengerService['usuario']) {
+    this.atleta = recibido.usuario;
   }
   openDialog(atletas: any): void{
     const found = false;
@@ -31,7 +31,9 @@ export class FriendsComponent implements OnInit {
   agregarAmigo(amigo: any): void{
     this.httpService.post('http://localhost/APIStraviaTec/Usuario/agregarAmigo',
       { iduser: this.atleta.iduser, idamigo: amigo.idusuario }).subscribe(
-      (resp: HttpResponse<any>) => { this.mensaje = resp; console.log(resp); });
+      (resp: HttpResponse<any>) => { this.mensaje = resp; console.log(resp); if (this.mensaje.var === false){
+        alert('Ya se encuentra en sus amigos');
+      }; });
   }
   ngOnInit(): void {
     alert(this.atleta.idusuario);

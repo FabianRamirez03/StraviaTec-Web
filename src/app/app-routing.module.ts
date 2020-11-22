@@ -22,7 +22,17 @@ import {ParticipantesCarreraComponent} from './Vistas/Admin/participantes-carrer
 import {ParticipantesPorCategoriasComponent} from './Vistas/Admin/participantes-por-categorias/participantes-por-categorias.component';
 import { ModiCarreraComponent } from './Vistas/Admin/modi-carrera/modi-carrera.component';
 import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.component';
+import {AdmiGruposComponent} from './Vistas/Admin/admi-grupos/admi-grupos.component';
+import {GestionMiembrosGrupoComponent} from './Vistas/Admin/gestion-miembros-grupo/gestion-miembros-grupo.component';
+import {ActualizarGrupoComponent} from './Vistas/Admin/actualizar-grupo/actualizar-grupo.component';
+import {ActividadesGrupoComponent} from './Vistas/Atleta/actividades-grupo/actividades-grupo.component';
+import {MisCarrerasComponent} from './Vistas/Atleta/mis-carreras/mis-carreras.component';
+import {GestionSolicitudesComponent} from './Vistas/Admin/gestion-solicitudes/gestion-solicitudes.component';
 import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
+import { CrearCarrerasComponent } from './Vistas/Admin/crear-carreras/crear-carreras.component';
+import { CrearRetosComponent } from './Vistas/Admin/crear-retos/crear-retos.component';
+import {CrearGruposComponent} from './Vistas/Admin/crear-grupos/crear-grupos.component';
+import {C} from '@angular/cdk/keycodes';
 
 const routes: Routes = [
   {path: '', redirectTo: '/Login', pathMatch: 'full' },
@@ -41,6 +51,7 @@ const routes: Routes = [
   {path: 'admicarreras', component: AdmicarrerasComponent},
   {path: 'admiretos', component: AdmiretosComponent},
   {path: 'Grupos', component: UnirseGrupoComponent},
+  {path: 'admigrupos', component: AdmiGruposComponent},
   {path: 'misGrupos', component: MisGruposComponent},
   {path: 'Patrocinadores', component: AdminPatrocinadoresComponent},
   {path: 'nuevoPatrocinador', component: NuevoPatrocinadorComponent},
@@ -49,15 +60,27 @@ const routes: Routes = [
   {path: 'modiCarreras', component: ModiCarreraComponent},
   {path: 'modiRetos', component: ModiRetosComponent},
   {path: 'subsCarreras', component: SubsCarreraComponent},
+  {path: 'gestionGrupos', component: GestionMiembrosGrupoComponent},
+  {path: 'actualizarGrupo', component: ActualizarGrupoComponent},
+  {path: 'actividadesGrupo', component: ActividadesGrupoComponent},
+  {path: 'misCarreras', component: MisCarrerasComponent},
+  {path: 'gestionSolicitudes', component: GestionSolicitudesComponent},
+  {path: 'crearGrupo', component: CrearGruposComponent},
+  {path: 'gestionSolicitudes', component: GestionSolicitudesComponent},
+  {path: 'crearCarrera', component: CrearCarrerasComponent},
+  {path: 'crearRetos', component: CrearRetosComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
 export const routingComponents = [LoginComponent, SignInComponent, FriendsComponent, HomePageComponent,
   ActivityPageComponent, AddActivtyComponent, ActivityInfoComponent, EditProfileComponent, CarrerasComponent,
   InicioComponent, RetosComponent, ProgresoComponent, AdmicarrerasComponent, AdmiretosComponent, UnirseGrupoComponent,
   MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent,
-  ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent, SubsCarreraComponent];
+   SubsCarreraComponent, ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent, AdmiGruposComponent ,
+  GestionMiembrosGrupoComponent, ActualizarGrupoComponent, ActividadesGrupoComponent, MisCarrerasComponent,
+  GestionSolicitudesComponent, CrearCarrerasComponent, CrearRetosComponent, CrearGruposComponent];

@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {ModiRetosComponent} from '../modi-retos/modi-retos.component';
+import {HttpClient, HttpResponse} from '@angular/common/http';
+import {Router} from '@angular/router';
+import {MessengerService} from '../../../MessengerService';
 
 @Component({
   selector: 'app-admiretos',
@@ -9,27 +12,25 @@ import {ModiRetosComponent} from '../modi-retos/modi-retos.component';
 })
 export class AdmiretosComponent implements OnInit {
   retos: any;
-  administrador: any;
-  constructor(public dialog: MatDialog) {
-    this.retos = ['Mariana', 'Julio', 'Mariana', 'Julio', 'Mariana', 'Julio'];
+  admin: any;
+  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService,
+              @Inject(MessengerService) public recibido: MessengerService['usuario']) {
+    this.admin = recibido.usuario;
+    this.httpService.post('http://localhost/APIStraviaTec/Retos/retosPorUsuario',
+      { idusuario: this.admin.idusuario}).subscribe(
+      (resp: HttpResponse<any>) => { this.retos = resp; console.log(resp); });
   }
 
-  ngOnInit(): void {
+
+  modificar(reto: any): void{
+    this.messengerService.setMessage(reto);
   }
-  openDialog(retomod: object[], modify: boolean): void {
-    const param = [retomod, modify, this.administrador];
-    const dialogRef = this.dialog.open(ModiRetosComponent, {
-      width: '70%',
-      height: '70%',
-      data: param,
-      position: {
-        top: '',
-        bottom: '',
-        left: '',
-        right: ''
-      }
-    });
-    dialogRef.afterClosed().subscribe(res => {console.log(res); });
+  eliminar(reto: any): void{
+    this.httpService.post('http://localhost/APIStraviaTec/Retos/deleteReto',
+      { Idreto: reto.idReto}).subscribe(
+      (resp: HttpResponse<any>) => { reto = resp; console.log(resp); });
+  }
+  ngOnInit(): void {
   }
 
 }

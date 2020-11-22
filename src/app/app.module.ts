@@ -21,6 +21,12 @@ import {MessengerService} from './MessengerService';
 import { CardActividadComponent } from './Vistas/Atleta/card-actividad/card-actividad.component';
 import { CrearRetosComponent } from './Vistas/Admin/crear-retos/crear-retos.component';
 import { CrearCarrerasComponent } from './Vistas/Admin/crear-carreras/crear-carreras.component';
+import { ActualizarGrupoComponent } from './Vistas/Admin/actualizar-grupo/actualizar-grupo.component';
+import { ActividadesGrupoComponent } from './Vistas/Atleta/actividades-grupo/actividades-grupo.component';
+import { MisCarrerasComponent } from './Vistas/Atleta/mis-carreras/mis-carreras.component';
+import { GestionSolicitudesComponent } from './Vistas/Admin/gestion-solicitudes/gestion-solicitudes.component';
+import {MESSENGER_SERVICE} from './MessengerService';
+import { CrearGruposComponent } from './Vistas/Admin/crear-grupos/crear-grupos.component';
 
 @NgModule({
   declarations: [
@@ -34,9 +40,14 @@ import { CrearCarrerasComponent } from './Vistas/Admin/crear-carreras/crear-carr
     ModiCarreraComponent,
     ModiRetosComponent,
     SubsCarreraComponent,
+    ActualizarGrupoComponent,
+    ActividadesGrupoComponent,
+    MisCarrerasComponent,
+    GestionSolicitudesComponent,
     CardActividadComponent,
     CrearCarrerasComponent,
     CrearRetosComponent,
+    CrearGruposComponent,
   ],
   imports: [
     BrowserModule,

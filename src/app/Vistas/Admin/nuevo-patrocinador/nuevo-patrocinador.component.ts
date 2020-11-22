@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import {MessengerService} from '../../../MessengerService';
 
 @Component({
   selector: 'app-nuevo-patrocinador',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nuevo-patrocinador.component.scss']
 })
 export class NuevoPatrocinadorComponent implements OnInit {
-
-  constructor() { }
+  admin: any;
+  constructor(@Inject(MessengerService) public recibido: MessengerService['usuario']) {
+    this.admin = recibido.usuario; }
 
   ngOnInit(): void {
   }
