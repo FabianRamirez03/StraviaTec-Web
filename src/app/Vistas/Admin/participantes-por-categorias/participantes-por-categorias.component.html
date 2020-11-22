@@ -143,21 +143,21 @@
     <div class="container FixedHeightContainer outer" id="posiciones">
       <div class="row Content scrollbar-light-blue inner">
         <h1>Orden descendente</h1>
-        <table class="table table-striped text-white table-hover totalWidth" id="tiempos">
+        <table class="table table-striped text-white table-hover " id="tiempos">
           <thead>
           <tr>
-            <th>Posición</th>
             <th>Nombre</th>
             <th>Edad</th>
             <th>Tiempo</th>
+            <th>Categoria</th>
           </tr>
           </thead>
           <tbody>
           <tr *ngFor="let athlete of porTiempo; let i = index">
-            <td>{{i}}</td>
             <td>{{athlete.nombre + ' ' + athlete.apellido}}</td>
             <td>{{athlete.edad}}</td>
             <td>{{athlete.tiempo}}</td>
+            <td>{{athlete.categoria}}</td>
           </tr>
           </tbody>
         </table>
