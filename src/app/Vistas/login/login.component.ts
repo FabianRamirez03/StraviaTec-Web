@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
           console.log('twins');
           this.httpService.post('http://localhost/APIStraviaTec/Usuario/porNombreUsuario',
                                             {nombreusuario: this.name}).subscribe((ans: HttpResponse<any>) => {this.usuario = ans;
+            // tslint:disable-next-line:max-line-length
                                                                                                                this.messengerService.usuario = this.usuario;
                                                                                                                this.router.navigate(['/', 'inicio']); });
         }
@@ -33,7 +34,9 @@ export class LoginComponent implements OnInit {
                                            console.log('notwins');
                                            this.httpService.post('http://localhost/APIStraviaTec/Usuario/porNombreUsuario',
                                             {nombreusuario: this.name}).subscribe((ans: HttpResponse<any>) => {this.usuario = ans;
+                                             // tslint:disable-next-line:max-line-length
                                                                                                                this.messengerService.usuario = this.usuario;
+                                             // tslint:disable-next-line:max-line-length
                                                                                                                this.messengerService.setMessage(this.usuario);
                                                                                                                this.router.navigate(['/', 'admigrupos']); });
                                          }

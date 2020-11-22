@@ -17,7 +17,7 @@ export class AdmiretosComponent implements OnInit {
               @Inject(MessengerService) public recibido: MessengerService['usuario']) {
     this.admin = recibido.usuario;
     this.httpService.post('http://localhost/APIStraviaTec/Retos/retosPorUsuario',
-      { idusuario: this.admin.idusuario}).subscribe(
+      { Idusuario: this.admin.idusuario}).subscribe(
       (resp: HttpResponse<any>) => { this.retos = resp; console.log(resp); });
   }
 

@@ -17,16 +17,24 @@ export class CrearRetosComponent implements OnInit {
     this.admin = recibido.usuario;
   }
   crear(): void{
+    let bool = true;
+    if ((document.getElementById('privacidad') as HTMLInputElement).value === 'true'){
+      bool = true;
+    }
+    else{
+      bool = false;
+    }
     const reto = {
       Idorganizador: this.admin.idusuario,
       Nombrereto: (document.getElementById('name') as HTMLInputElement).value,
-      Objetivoreto: (document.getElementById('cuenta') as HTMLInputElement).value,
+      Objetivoreto: (document.getElementById('objetivo') as HTMLInputElement).value,
       Fechainicio: (document.getElementById('inicioDate') as HTMLInputElement).value,
       Fechafinaliza: (document.getElementById('finaldate') as HTMLInputElement).value,
       Tipoactividad: (document.getElementById('tipo') as HTMLInputElement).value,
       Tiporeto: (document.getElementById('Reto') as HTMLInputElement).value,
-      Privada: (document.getElementById('privacidad') as HTMLInputElement).value
+      Privada: bool
     };
+    console.log(reto);
     this.httpService.post('http://localhost/APIStraviaTec/Retos/addReto',
       reto).subscribe(
       (resp: HttpResponse<any>) => { this.reto = resp; console.log(resp); });

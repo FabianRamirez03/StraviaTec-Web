@@ -27,11 +27,12 @@ export class ActivityInfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.activity = this.stateService.actividad;
+    console.log(this.activity);
     this.setMetaData();
   }
   setMetaData(): void{
     let gpxHTml;
-    gpxHTml = new L.GPX(this.activity.gpx, {
+    gpxHTml = new L.GPX(this.activity.recorrido, {
       async: true,
       polyline_options: {
         color: 'orange',

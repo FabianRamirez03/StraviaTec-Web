@@ -39,7 +39,7 @@ export class InicioComponent implements AfterViewChecked {
     for (const atleta in this.atletas){
       const map = L.map('map' + i);
       const tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Powered by Leaflet Extras',
+        attribution: 'Powered by Straviatec',
         maxZoom: 17
       });
       tiles.addTo(map);

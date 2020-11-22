@@ -12,6 +12,7 @@ export class GestionMiembrosGrupoComponent implements OnInit {
   deportistas: any;
   admin: any;
   grupo: any;
+  flag = true;
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService,
               @Inject(MessengerService) public recibido: MessengerService['usuario']) {
     this.admin = recibido.usuario;
@@ -25,6 +26,10 @@ export class GestionMiembrosGrupoComponent implements OnInit {
     this.httpService.post('http://localhost/APIStraviaTec/Grupo/deleteUser',
       { idusuario: deportista.idusuario, idgrupo: this.grupo.idgrupo}).subscribe(
       (resp: HttpResponse<any>) => { const ans = resp; console.log(resp); });
+  }
+
+  setFlag(): void{
+    this.flag = false;
   }
 
 }

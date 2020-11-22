@@ -14,15 +14,15 @@
                     <div class="mx-auto" style="width: 140px;">
                       <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
                         <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;flex-grow: 1; display:inline-flex ">
-                          <img id="profile-pic" src="{{profile.imageBytes}}" alt=""/>
+                          <img id="profile-pic" src="{{usuario.foto}}" alt=""/>
                         </span>
                       </div>
                     </div>
                   </div>
                   <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                     <div class="text-center text-sm-left mb-2 mb-sm-0">
-                      <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{profile.name}} {{profile.lastName}}</h4>
-                      <p class="mb-0">@{{profile.username}}</p>
+                      <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{usuario.primernombre}} {{usuario.apellidos}}</h4>
+                      <p class="mb-0">@{{usuario.nombreusuario}}</p>
                       <div class="mt-2">
                         <button id="photoBT" class="btn btn-primary" type="button" (click)="searchPhoto()">
                           <i class="fa fa-fw fa-camera"></i>
@@ -45,13 +45,13 @@
                             <div class="col">
                               <div class="form-group">
                                 <label>Nombre</label>
-                                <input class="form-control" type="text" name="name" placeholder="{{profile.name}}" value="{{profile.name}}">
+                                <input class="form-control" id="firstName" type="text" name="name" placeholder="{{usuario.primernombre}}" value="{{usuario.primernombre}}">
                               </div>
                             </div>
                             <div class="col">
                               <div class="form-group">
                                 <label>Apellidos</label>
-                                <input class="form-control" type="text" name="lastname" placeholder="{{profile.lastName}}" value="{{profile.lastName}}">
+                                <input class="form-control" id="lastName" type="text" name="lastname" placeholder="{{usuario.apellidos}}" value="{{usuario.apellidos}}">
                               </div>
                             </div>
                           </div>
@@ -60,7 +60,7 @@
                               <div class="form-group">
                                 <label>Nacionalidad</label>
                                   <select class="form-control" #element id="country" name="platform" (change)="printInput(element.value)">
-                                    <option value="" disabled selected hidden>Seleccione una nacionalidad</option>
+                                    <option value="{{usuario.nacionalidad}}">{{usuario.nacionalidad}}</option>
                                     <option value="Afghanistan">Afghanistan</option>
                                     <option value="Åland Islands">Åland Islands</option>
                                     <option value="Albania">Albania</option>
@@ -313,7 +313,7 @@
                             <div class="col mb-3">
                               <div class="form-group">
                                 <label>Peso en Kg</label>
-                                <input class="form-control" type="number" placeholder="{{profile.peso}}" value="{{profile.peso}}">
+                                <input class="form-control" type="number" placeholder="{{50}}" value="{{50}}">
                               </div>
                             </div>
                           </div>
@@ -326,7 +326,7 @@
                             <div class="col">
                               <div class="form-group">
                                 <label>Current Password</label>
-                                <input class="form-control" type="password" placeholder="••••••">
+                                <input class="form-control" id="currentPassword" type="password" placeholder="••••••">
                               </div>
                             </div>
                           </div>
@@ -334,7 +334,7 @@
                             <div class="col">
                               <div class="form-group">
                                 <label>New Password</label>
-                                <input class="form-control" type="password" placeholder="••••••">
+                                <input class="form-control" id="password" type="password" placeholder="••••••">
                               </div>
                             </div>
                           </div>
@@ -342,19 +342,19 @@
                             <div class="col">
                               <div class="form-group">
                                 <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                                <input class="form-control" type="password" placeholder="••••••"></div>
+                                <input class="form-control" id="confirmPassword" type="password" placeholder="••••••"></div>
                             </div>
                           </div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col d-flex justify-content-end">
-                          <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                          <button class="btn btn-primary" (click)="updateUser()" type="submit">Guardar Cambios</button>
                         </div>
                       </div>
                       <div class="row" style="padding-top: 15px">
                         <div class="col d-flex justify-content-end">
-                          <button class="btn btn-danger" type="submit" >Borrar cuenta</button>
+                          <button class="btn btn-danger" (click)="deleteUser()" type="submit" >Borrar cuenta</button>
                         </div>
                       </div>
                     </form>

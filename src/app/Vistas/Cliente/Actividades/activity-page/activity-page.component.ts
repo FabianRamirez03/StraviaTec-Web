@@ -31,10 +31,10 @@ export class ActivityPageComponent implements OnInit {
   }
   // tslint:disable-next-line:typedef
   clickMethod(activity: any): void {
-    if (confirm('Are you sure to delete ' + name)) {
+    if (confirm('Are you sure to delete ' + activity.nombreActividad)) {
       this.httpService.post('http://localhost/APIStraviaTec/Actividad/deleteActivity',
-        { idactividad: activity.idactividad}).subscribe(
-        (resp: HttpResponse<any>) => { this.actividades = resp; console.log(resp); });
+        { idactividad: activity.idActividad}).subscribe(
+        (resp: HttpResponse<any>) => {alert(activity.nombreActividad + ' Fue eliminado correctamente :)'); });
     }
   }
 }

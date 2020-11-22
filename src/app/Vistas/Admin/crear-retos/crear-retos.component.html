@@ -89,6 +89,12 @@
       </div>
     </div>
     <div class="form-group">
+      <label for="objetivo" class="col-sm-3 control-label">Objetivo*</label>
+      <div class="col-sm-9">
+        <input type="number" id="objetivo" placeholder="Metros para altitud o Kilómetros para fondo)" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
       <label for="inicioDate" class="col-sm-3 control-label">Fecha de inicio del reto*</label>
       <div class="col-sm-9">
         <input type="date" id="inicioDate" class="form-control">
@@ -101,7 +107,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="tipo" class="col-sm-3 control-label">Tipo</label>
+      <label for="tipo" class="col-sm-3 control-label">Tipo Actividad</label>
       <div class="col-sm-9">
         <select class="form-control" id="tipo" name="platform" required="required">
           <option value="kayak">kayak</option>
@@ -114,7 +120,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="Reto" class="col-sm-3 control-label">Reto</label>
+      <label for="Reto" class="col-sm-3 control-label">Tipo Reto</label>
       <div class="col-sm-9">
         <select class="form-control" id="Reto" name="platform" required="required">
           <option value="Fondo">Fondo</option>
@@ -123,16 +129,16 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="Reto" class="col-sm-3 control-label">Reto</label>
+      <label for="Reto" class="col-sm-3 control-label">Privacidad</label>
       <div class="col-sm-9">
         <select class="form-control" id="privacidad" name="platform" required="required">
-          <option value="Grupo">Grupo</option>
-          <option value="Publica">Publica</option>
+          <option value="true">Grupo</option>
+          <option value="false">Publica</option>
         </select>
       </div>
     </div>
     <div class="form-group">
-      <label for="patrocinadores" class="col-sm-3 control-label">Reto</label>
+      <label for="patrocinadores" class="col-sm-3 control-label">Patrocinadores</label>
       <div class="col-sm-9">
         <select class="form-control" id="patrocinadores" name="platform" required="required">
           <option value="Piros">Piros</option>
