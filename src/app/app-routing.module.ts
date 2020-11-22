@@ -31,6 +31,8 @@ import {GestionSolicitudesComponent} from './Vistas/Admin/gestion-solicitudes/ge
 import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
 import { CrearCarrerasComponent } from './Vistas/Admin/crear-carreras/crear-carreras.component';
 import { CrearRetosComponent } from './Vistas/Admin/crear-retos/crear-retos.component';
+import {CrearGruposComponent} from './Vistas/Admin/crear-grupos/crear-grupos.component';
+import {C} from '@angular/cdk/keycodes';
 
 const routes: Routes = [
   {path: '', redirectTo: '/Login', pathMatch: 'full' },
@@ -63,6 +65,8 @@ const routes: Routes = [
   {path: 'actividadesGrupo', component: ActividadesGrupoComponent},
   {path: 'misCarreras', component: MisCarrerasComponent},
   {path: 'gestionSolicitudes', component: GestionSolicitudesComponent},
+  {path: 'crearGrupo', component: CrearGruposComponent}
+  {path: 'gestionSolicitudes', component: GestionSolicitudesComponent},
   {path: 'crearCarrera', component: CrearCarrerasComponent},
   {path: 'crearRetos', component: CrearRetosComponent},
 ];
@@ -80,3 +84,4 @@ export const routingComponents = [LoginComponent, SignInComponent, FriendsCompon
    SubsCarreraComponent, ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent, AdmiGruposComponent ,
   GestionMiembrosGrupoComponent, ActualizarGrupoComponent, ActividadesGrupoComponent, MisCarrerasComponent,
   GestionSolicitudesComponent, CrearCarrerasComponent, CrearRetosComponent];
+  GestionSolicitudesComponent, CrearGruposComponent];

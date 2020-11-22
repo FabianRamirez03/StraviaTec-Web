@@ -26,6 +26,7 @@ import { ActividadesGrupoComponent } from './Vistas/Atleta/actividades-grupo/act
 import { MisCarrerasComponent } from './Vistas/Atleta/mis-carreras/mis-carreras.component';
 import { GestionSolicitudesComponent } from './Vistas/Admin/gestion-solicitudes/gestion-solicitudes.component';
 import {MESSENGER_SERVICE} from './MessengerService';
+import { CrearGruposComponent } from './Vistas/Admin/crear-grupos/crear-grupos.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import {MESSENGER_SERVICE} from './MessengerService';
     CardActividadComponent,
     CrearCarrerasComponent,
     CrearRetosComponent,
+    CrearGruposComponent,
   ],
   imports: [
     BrowserModule,
