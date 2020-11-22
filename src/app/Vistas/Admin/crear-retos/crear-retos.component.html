@@ -116,8 +116,17 @@
       <label for="Reto" class="col-sm-3 control-label">Reto</label>
       <div class="col-sm-9">
         <select class="form-control" id="Reto" name="platform" required="required">
-          <option value="Fondo">Publico</option>
-          <option value="Altitud">Grupo</option>
+          <option value="Fondo">Fondo</option>
+          <option value="Altitud">Altitud</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="Reto" class="col-sm-3 control-label">Reto</label>
+      <div class="col-sm-9">
+        <select class="form-control" id="privacidad" name="platform" required="required">
+          <option value="Grupo">Grupo</option>
+          <option value="Publica">Publica</option>
         </select>
       </div>
     </div>
@@ -133,23 +142,6 @@
         </select>
       </div>
     </div>
-    <div class="form-group">
-      <label class="control-label col-sm-3">Reto</label>
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col-sm-4">
-            <label class="radio-inline">
-              <input type="radio" name="mobil[1][]"  id="Fondo">Fondo
-            </label>
-          </div>
-          <div class="col-sm-4">
-            <label class="radio-inline">
-              <input type="radio" name="mobil[1][]" id="Altitud">Altitud
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- /.form-group -->
     <div class="form-group">
       <div class="col-sm-9 col-sm-offset-3">
@@ -157,6 +149,7 @@
       </div>
     </div>
     <button type="submit" (click)="crear()" class="btn btn-primary btn-block" >Crear</button>
+    <button type="submit" routerLink="/admiretos" (click)="volver()" class="btn btn-primary btn-block" >Volver</button>
   </form> <!-- /form -->
 </div> <!-- ./container -->
 </body>

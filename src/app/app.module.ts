@@ -25,6 +25,7 @@ import { ActualizarGrupoComponent } from './Vistas/Admin/actualizar-grupo/actual
 import { ActividadesGrupoComponent } from './Vistas/Atleta/actividades-grupo/actividades-grupo.component';
 import { MisCarrerasComponent } from './Vistas/Atleta/mis-carreras/mis-carreras.component';
 import { GestionSolicitudesComponent } from './Vistas/Admin/gestion-solicitudes/gestion-solicitudes.component';
+import {MESSENGER_SERVICE} from './MessengerService';
 
 @NgModule({
   declarations: [

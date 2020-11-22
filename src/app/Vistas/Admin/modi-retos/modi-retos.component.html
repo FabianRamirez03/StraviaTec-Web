@@ -115,27 +115,19 @@
     <div class="form-group">
       <label for="Reto" class="col-sm-3 control-label">Reto</label>
       <div class="col-sm-9">
-        <select class="form-control" id="Reto" name="platform" required="required">
-          <option value="Fondo">Publico</option>
-          <option value="Altitud">Grupo</option>
+        <select class="form-control" id="Privacidad" name="platform" required="required">
+          <option value="Publico">Publico</option>
+          <option value="Grupo">Grupo</option>
         </select>
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-3">Reto</label>
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col-sm-4">
-            <label class="radio-inline">
-              <input type="radio" name="mobil[1][]"  id="Fondo">Fondo
-            </label>
-          </div>
-          <div class="col-sm-4">
-            <label class="radio-inline">
-              <input type="radio" name="mobil[1][]" id="Altitud">Altitud
-            </label>
-          </div>
-        </div>
+      <label for="Reto" class="col-sm-3 control-label">Reto</label>
+      <div class="col-sm-9">
+        <select class="form-control" id="Reto" name="platform" required="required">
+          <option value="fondo">Fondo</option>
+          <option value="altitud">Altitud</option>
+        </select>
       </div>
     </div>
     <!-- /.form-group -->
@@ -145,6 +137,7 @@
       </div>
     </div>
     <button type="submit" (click)="modificar()" class="btn btn-primary btn-block" >Modificar</button>
+    <button type="submit" routerLink="/admiretos" (click)="volver()" class="btn btn-primary btn-block" >Volver</button>
   </form> <!-- /form -->
 </div> <!-- ./container -->
 </body>

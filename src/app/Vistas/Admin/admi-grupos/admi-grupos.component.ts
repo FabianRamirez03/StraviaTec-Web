@@ -12,14 +12,11 @@ import {MessengerService} from '../../../MessengerService';
 export class AdmiGruposComponent implements OnInit {
   grupos: any;
   admin: any;
-  name: any;
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
-    this.messengerService.message.subscribe(value => {this.name = value; });
-    this.httpService.post('http://localhost/APIStraviaTec/Usuario/porNombreUsuario',
-      {nombreusuario: this.name}).subscribe((ans: HttpResponse<any>) => {this.admin = ans;
-                                                                         this.httpService.post('http://localhost/APIStraviaTec/Usuario/Groups',
+    this.messengerService.message.subscribe(value => {this.admin = value; });
+    this.httpService.post('http://localhost/APIStraviaTec/Usuario/Groups',
         {idusuario: this.admin.idusuario}).subscribe((resp: HttpResponse<any>) => {this.grupos = resp;
-                                                                                   console.log(this.grupos); }); });
+                                                                                   console.log(this.grupos); });
   }
 
   ngOnInit(): void {

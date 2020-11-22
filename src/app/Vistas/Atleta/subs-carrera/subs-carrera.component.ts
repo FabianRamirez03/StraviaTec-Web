@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {MessengerService} from '../../../MessengerService';
@@ -9,15 +9,14 @@ import {MessengerService} from '../../../MessengerService';
   styleUrls: ['./subs-carrera.component.scss']
 })
 export class SubsCarreraComponent implements OnInit {
-  mensaje: any;
   atleta: any;
   carrera: any;
   ans: any;
   imageByte: string;
-  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
-    this.messengerService.message.subscribe(value => {this.mensaje = value; });
-    this.atleta = this.mensaje[0];
-    this.carrera = this.mensaje[1];
+  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService,
+              @Inject(MessengerService) public recibido: MessengerService['usuario']) {
+    this.atleta = recibido.usuario;
+    this.messengerService.message.subscribe(value => {this.carrera = value; });
   }
 
   ngOnInit(): void {

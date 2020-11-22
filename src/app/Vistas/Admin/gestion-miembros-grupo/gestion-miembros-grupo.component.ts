@@ -26,7 +26,7 @@ export class GestionMiembrosGrupoComponent implements OnInit {
       (resp: HttpResponse<any>) => { const ans = resp; console.log(resp); });
   }
   volver(): void{
-    this.messengerService.setMessage(this.admin.nombreusuario);
+    this.messengerService.setMessage(this.admin);
   }
 
 }

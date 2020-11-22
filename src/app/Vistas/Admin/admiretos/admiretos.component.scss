@@ -15,7 +15,29 @@ $orange: #ec992c;
   -moz-border-radius: $val;
   border-radius: $val;
 }
+div.footer {
+  text-align: right;
+  position: relative;
+  margin: 20px 5px;
+}
 
+div.footerActualizar {
+  text-align: left;
+  position: relative;
+  margin: 20px 5px;
+}
+
+div.footerActualizar a.btn{
+  padding: 20px 55px;
+  background-color: #DADADA;
+  color: #666;
+  margin: 100px 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: none;
+  border-radius: 10px;
+}
 @mixin cardsOpen() {
   &::before {
     background: rgba(10,72,112, 0.6);

@@ -35,7 +35,7 @@ export class ModiCarreraComponent implements OnInit {
   }
   volver(): void{
     console.log(this.admin);
-    this.messengerService.setMessage([0, this.admin]);
+    this.messengerService.setMessage(this.admin);
   }
 
   ngOnInit(): void {

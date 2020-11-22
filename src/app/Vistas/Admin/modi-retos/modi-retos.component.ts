@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {ActivatedRoute, Router} from '@angular/router';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 import {MessengerService} from '../../../MessengerService';
 
 @Component({
@@ -14,10 +14,27 @@ export class ModiRetosComponent implements OnInit {
   modify: boolean;
   admin: any;
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
-    this.messengerService.message.subscribe(value => {this.admin = value; });
+    this.messengerService.message.subscribe(value => {this.reto = value[0]; this.admin = value[1]; });
   }
-  modificar(): void{}
-
+  modificar(): void{
+    const reto = {
+      Idreto: this.reto.Idreto,
+      Idorganizador: this.admin.idusuario,
+      Nombrereto: (document.getElementById('name') as HTMLInputElement).value,
+      Objetivoreto: (document.getElementById('cuenta') as HTMLInputElement).value,
+      Fechainicio: (document.getElementById('inicioDate') as HTMLInputElement).value,
+      Fechafinaliza: (document.getElementById('finaldate') as HTMLInputElement).value,
+      Tipoactividad: (document.getElementById('tipo') as HTMLInputElement).value,
+      Tiporeto: (document.getElementById('Reto') as HTMLInputElement).value,
+      Privada: (document.getElementById('privacidad') as HTMLInputElement).value
+    };
+    this.httpService.post('http://localhost/APIStraviaTec/Retos/updateReto',
+      reto).subscribe(
+      (resp: HttpResponse<any>) => { this.reto = resp; console.log(resp); });
+  }
+  volver(): void{
+    this.messengerService.setMessage(this.admin);
+  }
   ngOnInit(): void {
   }
 

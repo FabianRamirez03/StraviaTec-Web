@@ -25,7 +25,7 @@ export class ActualizarGrupoComponent implements OnInit {
   }
   devolver(): any{
     this.messengerService.setMessage(this.admin.nombreusuario);
-    console.log(this.admin.Nombreusuario);
+    console.log(this.admin);
   }
 
   ngOnInit(): void {

@@ -14,7 +14,7 @@ export class AdmicarrerasComponent implements OnInit {
   carreras: any;
   administrador: any;
   constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
-    this.messengerService.message.subscribe(value => {this.administrador = value[1]; });
+    this.messengerService.message.subscribe(value => {this.administrador = value; });
     console.log(this.administrador);
     this.httpService.post('http://localhost/APIStraviaTec/Carrera/carrerasPorUsuario',
       { idusuario: this.administrador.idusuario}).subscribe(
@@ -33,7 +33,7 @@ export class AdmicarrerasComponent implements OnInit {
       (resp: HttpResponse<any>) => { this.carreras = resp; console.log(resp); });
   }
   suscritos(carrera: any): void{
-    this.messengerService.setMessage(carrera);
+    this.messengerService.setMessage([carrera, this.administrador]);
   }
 
   ngOnInit(): void {
