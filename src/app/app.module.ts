@@ -27,6 +27,7 @@ import { MisCarrerasComponent } from './Vistas/Atleta/mis-carreras/mis-carreras.
 import { GestionSolicitudesComponent } from './Vistas/Admin/gestion-solicitudes/gestion-solicitudes.component';
 import {MESSENGER_SERVICE} from './MessengerService';
 import { CrearGruposComponent } from './Vistas/Admin/crear-grupos/crear-grupos.component';
+import { CarrerasGrupoComponent } from './Vistas/Atleta/carreras-grupo/carreras-grupo.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { CrearGruposComponent } from './Vistas/Admin/crear-grupos/crear-grupos.c
     CrearCarrerasComponent,
     CrearRetosComponent,
     CrearGruposComponent,
+    CarrerasGrupoComponent,
   ],
   imports: [
     BrowserModule,

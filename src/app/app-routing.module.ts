@@ -20,8 +20,8 @@ import {AdminPatrocinadoresComponent} from './Vistas/Admin/admin-patrocinadores/
 import {NuevoPatrocinadorComponent} from './Vistas/Admin/nuevo-patrocinador/nuevo-patrocinador.component';
 import {ParticipantesCarreraComponent} from './Vistas/Admin/participantes-carrera/participantes-carrera.component';
 import {ParticipantesPorCategoriasComponent} from './Vistas/Admin/participantes-por-categorias/participantes-por-categorias.component';
-import { ModiCarreraComponent } from './Vistas/Admin/modi-carrera/modi-carrera.component';
-import { ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.component';
+import {ModiCarreraComponent } from './Vistas/Admin/modi-carrera/modi-carrera.component';
+import {ModiRetosComponent } from './Vistas/Admin/modi-retos/modi-retos.component';
 import {AdmiGruposComponent} from './Vistas/Admin/admi-grupos/admi-grupos.component';
 import {GestionMiembrosGrupoComponent} from './Vistas/Admin/gestion-miembros-grupo/gestion-miembros-grupo.component';
 import {ActualizarGrupoComponent} from './Vistas/Admin/actualizar-grupo/actualizar-grupo.component';
@@ -32,6 +32,7 @@ import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.
 import { CrearCarrerasComponent } from './Vistas/Admin/crear-carreras/crear-carreras.component';
 import { CrearRetosComponent } from './Vistas/Admin/crear-retos/crear-retos.component';
 import {CrearGruposComponent} from './Vistas/Admin/crear-grupos/crear-grupos.component';
+import {CarrerasGrupoComponent} from './Vistas/Atleta/carreras-grupo/carreras-grupo.component';
 import {C} from '@angular/cdk/keycodes';
 
 const routes: Routes = [
@@ -69,6 +70,7 @@ const routes: Routes = [
   {path: 'gestionSolicitudes', component: GestionSolicitudesComponent},
   {path: 'crearCarrera', component: CrearCarrerasComponent},
   {path: 'crearRetos', component: CrearRetosComponent},
+  {path: 'carrerasGrupo', component: CarrerasGrupoComponent}
 ];
 
 @NgModule({
@@ -83,4 +85,4 @@ export const routingComponents = [LoginComponent, SignInComponent, FriendsCompon
   MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent,
    SubsCarreraComponent, ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent, AdmiGruposComponent ,
   GestionMiembrosGrupoComponent, ActualizarGrupoComponent, ActividadesGrupoComponent, MisCarrerasComponent,
-  GestionSolicitudesComponent, CrearCarrerasComponent, CrearRetosComponent, CrearGruposComponent];
+  GestionSolicitudesComponent, CrearCarrerasComponent, CrearRetosComponent, CrearGruposComponent, CarrerasGrupoComponent];

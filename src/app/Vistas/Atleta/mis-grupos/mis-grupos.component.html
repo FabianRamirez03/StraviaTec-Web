@@ -17,6 +17,8 @@
               <img src="https://corendon.com.tr/upload/2015050807445394-spor.jpg" class="profile-avatar" alt="">
             </figure>
             <h4 class="card-title">{{grupo.nombreGrupo}}</h4>
+            <button  (click)="enviarGrupo(grupo)" routerLink="/carrerasGrupo" class="btn-block btn-primary">Carreras</button>
+            <button (click)="enviarGrupo(grupo)" routerLink="/carrerasGrupo" class="btn-block btn-primary">Retos</button>
           </div>
         </div>
       </div>

@@ -17,7 +17,10 @@ export class MisGruposComponent implements OnInit {
     this.httpService.post('http://localhost/APIStraviaTec/Usuario/Groups', { idusuario: this.atleta.idusuario}).subscribe(
       (resp: HttpResponse<any>) => { this.grupos = resp; console.log(resp); });
   }
-  misGrupos(): void{}
+  enviarGrupo(grupo: any): void{
+    this.messengerService.setMessage(grupo);
+  }
+
   ngOnInit(): void {}
 
 }
