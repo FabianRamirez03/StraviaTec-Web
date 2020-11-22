@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {Component, Inject, OnInit} from '@angular/core';
+import {HttpClient, HttpResponse} from '@angular/common/http';
+import {MessengerService} from '../../../MessengerService';
 
 @Component({
   selector: 'app-mis-carreras',
@@ -8,40 +9,19 @@ import {HttpClient} from '@angular/common/http';
 })
 export class MisCarrerasComponent implements OnInit {
   misCarreras: any;
-  constructor(public httpService: HttpClient) {
-    this.misCarreras = [
-      { idCarrera: '1',
-        nombreCarrera: 'Palmarin',
-        fecha : '15-12-2020',
-        tipoActividad: 'Ciclismo',
-        costo: '20000',
-        cuenta: 'CR-574231825',
-        mapa: 'https://www.wareable.com/media/imager/201708/25111-posts.facebook_lg.jpg'
-      },
-      { idCarrera: '2',
-        nombreCarrera: 'Ironman jaco',
-        fecha : '20-12-2020',
-        tipoActividad: 'Caminata',
-        costo: '15000',
-        cuenta: 'CR-5778831825',
-        mapa: 'https://beta.ctvnews.ca/content/dam/ctvnews/images/2019/12/10/1_4724422.jpg'
-      },
-      { idCarrera: '3',
-        nombreCarrera: 'Vuelta al Arenal',
-        fecha : '10-10-2020',
-        tipoActividad: 'Kayak',
-        costo: '8000',
-        cuenta: 'CR-574231825',
-        mapa: 'https://coresites-cdn-adm.imgix.net/mpora_new/wp-content/uploads/2014/08/Strava-Turkey.jpg'
-      }
-    ];
+  atleta: any;
+  constructor(public httpService: HttpClient, @Inject(MessengerService) public recibido: MessengerService['usuario'],
+              private messengerService: MessengerService) {
+    this.atleta = recibido.usuario;
+    this.httpService.post('http://localhost/APIStraviaTec/Carrera/carrerasPorUsuario', { Idusuario: this.atleta.idusuario}).subscribe(
+      (resp: HttpResponse<any>) => { this.misCarreras = resp; console.log(resp); });
   }
 
   ngOnInit(): void {
   }
 
-  tablaPosiciones(idCarrera: number): void{
-  console.log('Ver tabla de la carrera ' + idCarrera);
+  tablaPosiciones(carrera: any): void{
+    this.messengerService.setMessage(carrera);
 }
 
 }

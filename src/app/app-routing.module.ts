@@ -28,7 +28,9 @@ import {ActualizarGrupoComponent} from './Vistas/Admin/actualizar-grupo/actualiz
 import {ActividadesGrupoComponent} from './Vistas/Atleta/actividades-grupo/actividades-grupo.component';
 import {MisCarrerasComponent} from './Vistas/Atleta/mis-carreras/mis-carreras.component';
 import {GestionSolicitudesComponent} from './Vistas/Admin/gestion-solicitudes/gestion-solicitudes.component';
-import {SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
+import { SubsCarreraComponent } from './Vistas/Atleta/subs-carrera/subs-carrera.component';
+import { CrearCarrerasComponent } from './Vistas/Admin/crear-carreras/crear-carreras.component';
+import { CrearRetosComponent } from './Vistas/Admin/crear-retos/crear-retos.component';
 import {CrearGruposComponent} from './Vistas/Admin/crear-grupos/crear-grupos.component';
 import {CarrerasGrupoComponent} from './Vistas/Atleta/carreras-grupo/carreras-grupo.component';
 import {C} from '@angular/cdk/keycodes';
@@ -65,7 +67,9 @@ const routes: Routes = [
   {path: 'misCarreras', component: MisCarrerasComponent},
   {path: 'gestionSolicitudes', component: GestionSolicitudesComponent},
   {path: 'crearGrupo', component: CrearGruposComponent},
-  {path: 'carrerasGrupo', component: CarrerasGrupoComponent}
+  {path: 'gestionSolicitudes', component: GestionSolicitudesComponent},
+  {path: 'crearCarrera', component: CrearCarrerasComponent},
+  {path: 'crearRetos', component: CrearRetosComponent},
 ];
 
 @NgModule({
@@ -80,4 +84,4 @@ export const routingComponents = [LoginComponent, SignInComponent, FriendsCompon
   MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent,
    SubsCarreraComponent, ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent, AdmiGruposComponent ,
   GestionMiembrosGrupoComponent, ActualizarGrupoComponent, ActividadesGrupoComponent, MisCarrerasComponent,
-  GestionSolicitudesComponent, CrearGruposComponent, CarrerasGrupoComponent];
+  GestionSolicitudesComponent, CrearCarrerasComponent, CrearRetosComponent, CrearGruposComponent];

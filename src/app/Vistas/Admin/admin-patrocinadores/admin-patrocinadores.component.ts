@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {MessengerService} from '../../../MessengerService';
@@ -12,13 +12,13 @@ export class AdminPatrocinadoresComponent implements OnInit {
   patrocinadores: any;
   admin: any;
   carrera: any;
-  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
-    this.messengerService.message.subscribe(value => {this.admin = value; });
+  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService,
+              @Inject(MessengerService) public recibido: MessengerService['usuario']) {
+    this.admin = recibido.usuario;
+    this.messengerService.message.subscribe(value => {this.carrera = value; });
     this.httpService.post('http://localhost/APIStraviaTec/Carrera/participantesCarrera',
       { Idcarrera: this.carrera.Idcarrera}).subscribe(
       (resp: HttpResponse<any>) => { this.patrocinadores = resp; console.log(resp); });
-  }
-  eliminar(patrocinador: void): void{
   }
 
   ngOnInit(): void {

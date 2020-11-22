@@ -13,8 +13,10 @@ export class ModiCarreraComponent implements OnInit {
   admin: any;
   carrera: any;
   modify: boolean;
-  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService) {
-    this.messengerService.message.subscribe(value => {this.carrera = value[0]; this.admin = value[1]; });
+  constructor(public httpService: HttpClient, private router: Router, private messengerService: MessengerService,
+              @Inject(MessengerService) public recibido: MessengerService['usuario']) {
+    this.admin = recibido.usuario;
+    this.messengerService.message.subscribe(value => {this.carrera = value; });
     console.log(this.admin);
   }
   modificar(): void{
@@ -32,10 +34,6 @@ export class ModiCarreraComponent implements OnInit {
     this.httpService.post('http://localhost/APIStraviaTec/Carrera/modifCarrera',
       carreraMod).subscribe(
       (resp: HttpResponse<any>) => { this.carrera = resp; console.log(resp); });
-  }
-  volver(): void{
-    console.log(this.admin);
-    this.messengerService.setMessage([0, this.admin]);
   }
 
   ngOnInit(): void {
