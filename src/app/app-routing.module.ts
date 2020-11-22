@@ -65,7 +65,7 @@ const routes: Routes = [
   {path: 'actividadesGrupo', component: ActividadesGrupoComponent},
   {path: 'misCarreras', component: MisCarrerasComponent},
   {path: 'gestionSolicitudes', component: GestionSolicitudesComponent},
-  {path: 'crearGrupo', component: CrearGruposComponent}
+  {path: 'crearGrupo', component: CrearGruposComponent},
   {path: 'gestionSolicitudes', component: GestionSolicitudesComponent},
   {path: 'crearCarrera', component: CrearCarrerasComponent},
   {path: 'crearRetos', component: CrearRetosComponent},
@@ -83,5 +83,4 @@ export const routingComponents = [LoginComponent, SignInComponent, FriendsCompon
   MisGruposComponent, AdminPatrocinadoresComponent, NuevoPatrocinadorComponent, ParticipantesCarreraComponent,
    SubsCarreraComponent, ParticipantesPorCategoriasComponent, ModiCarreraComponent, ModiRetosComponent, AdmiGruposComponent ,
   GestionMiembrosGrupoComponent, ActualizarGrupoComponent, ActividadesGrupoComponent, MisCarrerasComponent,
-  GestionSolicitudesComponent, CrearCarrerasComponent, CrearRetosComponent];
-  GestionSolicitudesComponent, CrearGruposComponent];
+  GestionSolicitudesComponent, CrearCarrerasComponent, CrearRetosComponent, CrearGruposComponent];
