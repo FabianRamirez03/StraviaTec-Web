@@ -14,243 +14,15 @@ import {MessengerService} from '../../../MessengerService';
 })
 export class ParticipantesPorCategoriasComponent implements OnInit {
 
-  junior = [
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-  ];
+  junior = [];
   sub23 = [];
-  open = [
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-  ];
+  open = [];
   masterA = [];
   masterB = [];
   masterC = [];
-  Elite = [
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-  ];
-  porTiempo = [
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-    {
-      tiempo: '02:25:22',
-      nombre: 'Fabian Ramirez Arrieta',
-      edad: '20',
-    },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  ];
-  nombreCarrera = 'Carrera Lindora';
+  Elite = [];
+  porTiempo: any;
+  nombreCarrera;
 
   admin: any;
   carrera: any;
@@ -260,14 +32,39 @@ export class ParticipantesPorCategoriasComponent implements OnInit {
               @Inject(MessengerService) public recibido: MessengerService['usuario']) {
     this.admin = recibido.usuario;
     this.messengerService.message.subscribe(value => {this.carrera = value; });
+    this.nombreCarrera = this.carrera.nombreCarrera;
     this.httpService.post('http://localhost/APIStraviaTec/Carrera/participantesCarrera',
       { idcarrera: this.carrera.idCarrera}).subscribe(
-      (resp: HttpResponse<any>) => { this.participantes = resp; console.log(resp); });
+      (resp: HttpResponse<any>) => {
+        this.participantes = resp;
+        this.setCategorias(this.participantes);
+        this.Elite = this.participantes;
+      });
+    this.httpService.post('http://localhost/APIStraviaTec/Carrera/posicionesCarrera',
+      { idcarrera: this.carrera.idCarrera}).subscribe(
+      (resp: HttpResponse<any>) => {
+        this.porTiempo = resp;
+        console.log(resp);
+      });
   }
 
   ngOnInit(): void {
   }
 
+  setCategorias(participantes): void{
+    const categorias = ['Junior', 'Sub-23', 'Open', 'Master-A', 'Master-B', 'Master-C'];
+    for (let i = 0; i < categorias.length; i++){
+      this.setCategoriasAux(participantes, categorias[i], i);
+    }
+  }
+  setCategoriasAux(participantes, categoria, index): void{
+    const listas = [this.junior, this.sub23, this.open, this.masterA, this.masterB, this.masterC];
+    for (const participante of participantes) {
+      if (participante.categoria === categoria){
+        listas[index].push(participante);
+      }
+    }
+  }
   // tslint:disable-next-line:typedef
   openPDFCategorias(): void {
     const doc = new jsPDF();
